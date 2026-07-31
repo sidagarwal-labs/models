@@ -8,8 +8,11 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $readmePath = Join-Path $repositoryRoot 'README.md'
 $gitDirectory = Join-Path $repositoryRoot '.git'
+$recentStartMarker = '<!-- recent-updates:start -->'
+$recentEndMarker = '<!-- recent-updates:end -->'
 $startMarker = '<!-- coverage:start -->'
 $endMarker = '<!-- coverage:end -->'
+$recentUpdateCount = 10
 
 function ConvertTo-RepositoryPath {
     param([Parameter(Mandatory = $true)][string]$FullName)
@@ -396,6 +399,22 @@ $tickerWorkbooks = @(
         Sort-Object FullName
 )
 
+$dirtyWorkbookPaths = @{}
+$changedWorkbookPaths = @(& git -C $repositoryRoot diff --name-only --diff-filter=AM HEAD -- '*.xlsx')
+if ($LASTEXITCODE -ne 0) {
+    throw 'Could not read changed workbook paths from Git.'
+}
+$untrackedWorkbookPaths = @(& git -C $repositoryRoot ls-files --others --exclude-standard -- '*.xlsx')
+if ($LASTEXITCODE -ne 0) {
+    throw 'Could not read untracked workbook paths from Git.'
+}
+foreach ($changedWorkbookPath in @($changedWorkbookPaths) + @($untrackedWorkbookPaths)) {
+    if (-not [string]::IsNullOrWhiteSpace($changedWorkbookPath)) {
+        $dirtyWorkbookPaths[$changedWorkbookPath.Replace('\', '/')] = $true
+    }
+}
+
+$pendingPublishedAt = [DateTimeOffset]::Now
 $coverageRows = @()
 
 foreach ($workbook in $tickerWorkbooks) {
@@ -413,6 +432,22 @@ foreach ($workbook in $tickerWorkbooks) {
     }
 
     $coveragePeriod = if ($coverage -eq 'Not listed') { $null } else { Get-Quarter -Value $coverage }
+    if ($dirtyWorkbookPaths.ContainsKey($repositoryPath)) {
+        $publishedAt = $pendingPublishedAt
+    }
+    else {
+        $publishedAtOutput = @(& git -C $repositoryRoot log -1 --format='%cI' -- $repositoryPath)
+        if ($LASTEXITCODE -ne 0) {
+            throw "Could not read Git history for $repositoryPath."
+        }
+        $publishedAtText = @($publishedAtOutput | Select-Object -First 1)
+        $publishedAt = if ($publishedAtText.Count -eq 0 -or [string]::IsNullOrWhiteSpace($publishedAtText[0])) {
+            [DateTimeOffset]::MinValue
+        }
+        else {
+            [DateTimeOffset]::Parse($publishedAtText[0], [System.Globalization.CultureInfo]::InvariantCulture)
+        }
+    }
 
     $coverageRows += [pscustomobject]@{
         Ticker = $workbook.BaseName
@@ -420,6 +455,7 @@ foreach ($workbook in $tickerWorkbooks) {
         Target = ConvertTo-MarkdownTarget -RepositoryPath $repositoryPath
         Coverage = $coverage
         CoverageSortKey = if ($null -eq $coveragePeriod) { 0 } else { $coveragePeriod.SortKey }
+        PublishedAt = $publishedAt
     }
 }
 
@@ -430,15 +466,40 @@ $stockRows = @(
                 Sort-Object @{ Expression = { $_.CoverageSortKey }; Descending = $true }, Target |
                 Select-Object -First 1
         )[0]
+        $latestPublication = @(
+            $tickerGroup.Group |
+                Sort-Object @{ Expression = { $_.PublishedAt }; Descending = $true }, Target |
+                Select-Object -First 1
+        )[0]
 
         [pscustomobject]@{
             Ticker = $tickerGroup.Name
             Sector = @($tickerGroup.Group.Sector | Sort-Object -Unique) -join ', '
             Target = $preferredModel.Target
             Coverage = $preferredModel.Coverage
+            CoverageSortKey = $preferredModel.CoverageSortKey
+            PublishedAt = $latestPublication.PublishedAt
         }
     }
 )
+
+$recentLines = New-Object 'System.Collections.Generic.List[string]'
+$recentLines.Add($recentStartMarker)
+$recentLines.Add('| Ticker | Latest earnings | Published |')
+$recentLines.Add('| --- | --- | --- |')
+foreach ($row in $stockRows |
+    Sort-Object @{ Expression = { $_.PublishedAt }; Descending = $true }, @{ Expression = { $_.CoverageSortKey }; Descending = $true }, Ticker |
+    Select-Object -First $recentUpdateCount) {
+    $publishedDate = if ($row.PublishedAt -eq [DateTimeOffset]::MinValue) {
+        'Not listed'
+    }
+    else {
+        $row.PublishedAt.ToString('MMM d, yyyy', [System.Globalization.CultureInfo]::InvariantCulture)
+    }
+    $recentLines.Add("| [$($row.Ticker)]($($row.Target)) | $($row.Coverage) | $publishedDate |")
+}
+$recentLines.Add($recentEndMarker)
+$recentTable = $recentLines -join [System.Environment]::NewLine
 
 $tableLines = New-Object 'System.Collections.Generic.List[string]'
 $tableLines.Add($startMarker)
@@ -466,6 +527,22 @@ else {
     $content = "# Financial Models$([System.Environment]::NewLine)$([System.Environment]::NewLine)## Coverage$([System.Environment]::NewLine)$([System.Environment]::NewLine)$table"
     if (-not [string]::IsNullOrWhiteSpace($existingContent)) {
         $content += "$([System.Environment]::NewLine)$([System.Environment]::NewLine)$existingContent"
+    }
+}
+
+if ($content.Contains($recentStartMarker) -and $content.Contains($recentEndMarker)) {
+    $recentPattern = [regex]::Escape($recentStartMarker) + '.*?' + [regex]::Escape($recentEndMarker)
+    $content = [regex]::Replace($content, $recentPattern, $recentTable, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+}
+else {
+    $coverageHeading = '## Coverage'
+    $coverageHeadingIndex = $content.IndexOf($coverageHeading, [System.StringComparison]::Ordinal)
+    $recentSection = "## Recent updates$([System.Environment]::NewLine)$([System.Environment]::NewLine)$recentTable$([System.Environment]::NewLine)$([System.Environment]::NewLine)"
+    if ($coverageHeadingIndex -ge 0) {
+        $content = $content.Insert($coverageHeadingIndex, $recentSection)
+    }
+    else {
+        $content = $recentSection + $content
     }
 }
 
