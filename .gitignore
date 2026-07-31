@@ -1,0 +1,11 @@
+# Excel lock, recovery, and backup files
+~$*.xls*
+*.xlk
+*.wbk
+*.tmp
+*.bak
+
+# Operating-system files
+.DS_Store
+Desktop.ini
+Thumbs.db
