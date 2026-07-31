@@ -399,6 +399,18 @@ $tickerWorkbooks = @(
         Sort-Object FullName
 )
 
+$dirtyWorkbookPaths = @(
+    & git -C $repositoryRoot diff HEAD --name-only --diff-filter=AM -- '*.xlsx'
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Could not read changed workbook paths from Git.'
+    }
+
+    & git -C $repositoryRoot ls-files --others --exclude-standard -- '*.xlsx'
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Could not read untracked workbook paths from Git.'
+    }
+) | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -Unique
+
 $coverageRows = @()
 
 foreach ($workbook in $tickerWorkbooks) {
@@ -444,13 +456,41 @@ $stockRows = @(
     }
 )
 
+$existingReadme = if (Test-Path -LiteralPath $readmePath) { [System.IO.File]::ReadAllText($readmePath) } else { '' }
+$storedRecentTickers = @()
+if ($existingReadme.Contains($recentStartMarker) -and $existingReadme.Contains($recentEndMarker)) {
+    $recentBlockPattern = [regex]::Escape($recentStartMarker) + '(.*?)' + [regex]::Escape($recentEndMarker)
+    $recentBlockMatch = [regex]::Match($existingReadme, $recentBlockPattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    $storedRecentTickers = @(
+        [regex]::Matches($recentBlockMatch.Groups[1].Value, '(?m)^\| \[(?<ticker>[A-Z0-9_]+)\]') |
+            ForEach-Object { $_.Groups['ticker'].Value }
+    )
+}
+
+$dirtyTickers = @(
+    $dirtyWorkbookPaths | ForEach-Object { [System.IO.Path]::GetFileNameWithoutExtension($_) }
+)
+$candidateRecentTickers = @($dirtyTickers) + @($storedRecentTickers)
+$recentRows = New-Object 'System.Collections.Generic.List[object]'
+$recentTickers = @{}
+foreach ($recentTicker in $candidateRecentTickers) {
+    $recentModel = @($stockRows | Where-Object Ticker -eq $recentTicker | Select-Object -First 1)
+    if ($recentModel.Count -eq 0 -or $recentTickers.ContainsKey($recentTicker)) {
+        continue
+    }
+
+    $recentRows.Add($recentModel[0])
+    $recentTickers[$recentTicker] = $true
+    if ($recentRows.Count -eq $recentUpdateCount) {
+        break
+    }
+}
+
 $recentLines = New-Object 'System.Collections.Generic.List[string]'
 $recentLines.Add($recentStartMarker)
 $recentLines.Add('| Ticker | Sector | Latest earnings |')
 $recentLines.Add('| --- | --- | --- |')
-foreach ($row in $stockRows |
-    Sort-Object @{ Expression = { $_.CoverageSortKey }; Descending = $true }, Ticker |
-    Select-Object -First $recentUpdateCount) {
+foreach ($row in $recentRows) {
     $recentLines.Add("| [$($row.Ticker)]($($row.Target)) | $($row.Sector) | $($row.Coverage) |")
 }
 $recentLines.Add($recentEndMarker)
@@ -466,12 +506,7 @@ foreach ($row in $stockRows | Sort-Object Sector, Ticker) {
 $tableLines.Add($endMarker)
 $table = $tableLines -join [System.Environment]::NewLine
 
-$readme = if (Test-Path -LiteralPath $readmePath) {
-    [System.IO.File]::ReadAllText($readmePath)
-}
-else {
-    ''
-}
+$readme = $existingReadme
 
 if ($readme.Contains($startMarker) -and $readme.Contains($endMarker)) {
     $pattern = [regex]::Escape($startMarker) + '.*?' + [regex]::Escape($endMarker)
@@ -488,11 +523,12 @@ else {
 if ($content.Contains($recentStartMarker) -and $content.Contains($recentEndMarker)) {
     $recentPattern = [regex]::Escape($recentStartMarker) + '.*?' + [regex]::Escape($recentEndMarker)
     $content = [regex]::Replace($content, $recentPattern, $recentTable, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    $content = $content.Replace('## Recent updates', '## Recent model updates')
 }
 else {
     $coverageHeading = '## Coverage'
     $coverageHeadingIndex = $content.IndexOf($coverageHeading, [System.StringComparison]::Ordinal)
-    $recentSection = "## Recent updates$([System.Environment]::NewLine)$([System.Environment]::NewLine)$recentTable$([System.Environment]::NewLine)$([System.Environment]::NewLine)"
+    $recentSection = "## Recent model updates$([System.Environment]::NewLine)$([System.Environment]::NewLine)$recentTable$([System.Environment]::NewLine)$([System.Environment]::NewLine)"
     if ($coverageHeadingIndex -ge 0) {
         $content = $content.Insert($coverageHeadingIndex, $recentSection)
     }

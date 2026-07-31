@@ -1,20 +1,12 @@
 # Financial Models
 
-## Recent updates
+## Recent model updates
 
 <!-- recent-updates:start -->
 | Ticker | Sector | Latest earnings |
 | --- | --- | --- |
-| [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 |
-| [SNOW](Tech/Productivity/SNOW.xlsx) | Tech / Productivity | FQ4 2026 |
-| [WDAY](Tech/Productivity/WDAY.xlsx) | Tech / Productivity | FQ4 2026 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 |
-| [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Q3 2026 |
-| [NVDA](Tech/PC/NVDA.xlsx) | Tech / PC | Q3 2026 |
-| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Q3 2026 |
-| [MU](Tech/PC/MU.xlsx) | Tech / PC | FQ2 2026 |
-| [RBRK](Tech/Cloud/RBRK.xlsx) | Tech / Cloud | Q2 2026 |
-| [STX](Tech/PC/STX.xlsx) | Tech / PC | Q2 2026 |
+| [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 |
 <!-- recent-updates:end -->
 
 ## Coverage
