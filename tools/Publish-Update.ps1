@@ -22,6 +22,7 @@ function Assert-GitSuccess {
 Push-Location $repositoryRoot
 try {
     & (Join-Path $PSScriptRoot 'Update-Catalog.ps1')
+    & (Join-Path $PSScriptRoot 'Update-Coverage.ps1')
     & (Join-Path $PSScriptRoot 'Test-Models.ps1')
 
     $insideWorkTree = & git rev-parse --is-inside-work-tree 2>$null
