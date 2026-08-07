@@ -4,12 +4,12 @@
 
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
-| [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Pending | Q3 2026 |
 | [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Pending | Q4 2025 |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Pending | Q4 2025 |
 | [MU](Tech/PC/MU.xlsx) | Tech / PC | Pending | FQ2 2026 |
 | [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Pending | Q3 2026 |
+| [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | Updated (Jul 31, 2026) | FQ3 2026 |
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | Updated (Jul 31, 2026) | FQ4 2026 |
 
