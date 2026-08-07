@@ -4,8 +4,8 @@
 
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
-| [APP](Entertainment/APP.xlsx) | Entertainment | Pending | Q1 2025 |
 | [NFLX](Entertainment/NFLX.xlsx) | Entertainment | Pending | Q4 2025 |
+| [APP](Entertainment/APP.xlsx) | Entertainment | Updated (Aug 7, 2026) | Q1 2026 |
 | [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Updated (Aug 7, 2026) | Q4 2026 |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Updated (Aug 7, 2026) | Q1 2027 |
 | [MU](Tech/PC/MU.xlsx) | Tech / PC | Updated (Aug 7, 2026) | FQ3 2026 |
@@ -33,7 +33,7 @@
 | [OPEN](Construction/OPEN.xlsx) | Construction | Q4 2025 |
 | [ABNB](Entertainment/ABNB.xlsx) | Entertainment | Q4 2022 |
 | [AMC](Entertainment/AMC.xlsx) | Entertainment | Q4 2024 |
-| [APP](Entertainment/APP.xlsx) | Entertainment | Q1 2025 |
+| [APP](Entertainment/APP.xlsx) | Entertainment | Q1 2026 |
 | [ATVI](Entertainment/ATVI.xlsx) | Entertainment | Q4 2023 |
 | [DIS](Entertainment/DIS.xlsx) | Entertainment | FQ3 2024 |
 | [EA](Entertainment/EA.xlsx) | Entertainment | FQ4 2025 |
