@@ -2,7 +2,6 @@
 
 ## Model update tracker
 
-<!-- recent-updates:start -->
 | Ticker | Sector | Latest earnings | Status |
 | --- | --- | --- | --- |
 | [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Q2 2026 | Updated |
@@ -13,11 +12,9 @@
 | [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Q3 2026 | Pending |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 | Updated |
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 | Updated |
-<!-- recent-updates:end -->
 
 ## Coverage
 
-<!-- coverage:start -->
 | Ticker | Sector | Latest earnings |
 | --- | --- | --- |
 | [AAL](Aviation/AAL.xlsx) | Aviation | Q4 2024 |
@@ -137,7 +134,6 @@
 | [VZ](Tech/Productivity/VZ.xlsx) | Tech / Productivity | Q4 2024 |
 | [WDAY](Tech/Productivity/WDAY.xlsx) | Tech / Productivity | FQ4 2026 |
 | [ZS](Tech/Productivity/ZS.xlsx) | Tech / Productivity | Q3 2025 |
-<!-- coverage:end -->
 
 ## Credits
 
