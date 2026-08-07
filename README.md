@@ -15,6 +15,19 @@
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | Updated (Jul 31, 2026) | FQ3 2026 |
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | Updated (Jul 31, 2026) | FQ4 2026 |
 
+## Coverage gaps
+
+As of Aug 7, 2026.
+
+| Ticker | Model through | Latest reported | Gap |
+| --- | --- | --- | --- |
+| [APP](Entertainment/APP.xlsx) | Q1 2025 | [Q2 2026](https://www.sec.gov/Archives/edgar/data/0001751008/000175100826000059/app-20260630.htm) | 5 quarters |
+| [ARM](Tech/PC/ARM.xlsx) | Q3 2026 | [FQ1 2027](https://newsroom.arm.com/news/arm-q1-fye27-results) | 2 quarters |
+| [META](Tech/Consumer%20Software/META.xlsx) | Q4 2025 | [Q2 2026](https://www.sec.gov/Archives/edgar/data/0001326801/000162828026050705/meta-20260630.htm) | 2 quarters |
+| [NFLX](Entertainment/NFLX.xlsx) | Q4 2025 | [Q2 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm) | 2 quarters |
+| [MU](Tech/PC/MU.xlsx) | FQ2 2026 | [FQ3 2026](https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm) | 1 quarter |
+| [SNDK](Tech/PC/SNDK.xlsx) | Q3 2026 | [FQ4 2026](https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results) | 1 quarter |
+
 ## Coverage
 
 | Ticker | Sector | Latest earnings |
