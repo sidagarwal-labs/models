@@ -5,10 +5,10 @@
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Pending | Q3 2026 |
-| [MU](Tech/PC/MU.xlsx) | Tech / PC | Pending | FQ2 2026 |
 | [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Pending | Q3 2026 |
 | [APP](Entertainment/APP.xlsx) | Entertainment | Pending | Q1 2025 |
 | [NFLX](Entertainment/NFLX.xlsx) | Entertainment | Pending | Q4 2025 |
+| [MU](Tech/PC/MU.xlsx) | Tech / PC | Updated (Aug 7, 2026) | FQ3 2026 |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
@@ -114,7 +114,7 @@
 | [AVGO](Tech/PC/AVGO.xlsx) | Tech / PC | FQ4 2025 |
 | [CRWV](Tech/PC/CRWV.xlsx) | Tech / PC | Q2 2024 |
 | [INTC](Tech/PC/INTC.xlsx) | Tech / PC | Q3 2024 |
-| [MU](Tech/PC/MU.xlsx) | Tech / PC | FQ2 2026 |
+| [MU](Tech/PC/MU.xlsx) | Tech / PC | FQ3 2026 |
 | [NBIS](Tech/PC/NBIS.xlsx) | Tech / PC | Q1 2025 |
 | [NVDA](Tech/PC/NVDA.xlsx) | Tech / PC | Q3 2026 |
 | [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Q4 2024 |
