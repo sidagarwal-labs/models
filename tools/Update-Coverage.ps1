@@ -457,29 +457,46 @@ $stockRows = @(
 )
 
 $existingReadme = if (Test-Path -LiteralPath $readmePath) { [System.IO.File]::ReadAllText($readmePath) } else { '' }
-$storedRecentTickers = @()
+$storedRecentEntries = @()
 if ($existingReadme.Contains($recentStartMarker) -and $existingReadme.Contains($recentEndMarker)) {
     $recentBlockPattern = [regex]::Escape($recentStartMarker) + '(.*?)' + [regex]::Escape($recentEndMarker)
     $recentBlockMatch = [regex]::Match($existingReadme, $recentBlockPattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
-    $storedRecentTickers = @(
-        [regex]::Matches($recentBlockMatch.Groups[1].Value, '(?m)^\| \[(?<ticker>[A-Z0-9_]+)\]') |
-            ForEach-Object { $_.Groups['ticker'].Value }
+    $storedRecentEntries = @(
+        [regex]::Matches($recentBlockMatch.Groups[1].Value, '(?m)^(?<line>\| \[(?<ticker>[A-Z0-9_]+)\].*)$') |
+            ForEach-Object {
+                [pscustomobject]@{
+                    Ticker = $_.Groups['ticker'].Value
+                    Status = if ($_.Groups['line'].Value -match '\| Pending \|$') { 'Pending' } else { 'Updated' }
+                }
+            }
     )
 }
 
-$dirtyTickers = @(
-    $dirtyWorkbookPaths | ForEach-Object { [System.IO.Path]::GetFileNameWithoutExtension($_) }
+$dirtyEntries = @(
+    $dirtyWorkbookPaths | ForEach-Object {
+        [pscustomobject]@{
+            Ticker = [System.IO.Path]::GetFileNameWithoutExtension($_)
+            Status = 'Updated'
+        }
+    }
 )
-$candidateRecentTickers = @($dirtyTickers) + @($storedRecentTickers)
+$candidateRecentEntries = @($dirtyEntries) + @($storedRecentEntries)
 $recentRows = New-Object 'System.Collections.Generic.List[object]'
 $recentTickers = @{}
-foreach ($recentTicker in $candidateRecentTickers) {
+foreach ($recentEntry in $candidateRecentEntries) {
+    $recentTicker = $recentEntry.Ticker
     $recentModel = @($stockRows | Where-Object Ticker -eq $recentTicker | Select-Object -First 1)
     if ($recentModel.Count -eq 0 -or $recentTickers.ContainsKey($recentTicker)) {
         continue
     }
 
-    $recentRows.Add($recentModel[0])
+    $recentRows.Add([pscustomobject]@{
+        Ticker = $recentModel[0].Ticker
+        Sector = $recentModel[0].Sector
+        Target = $recentModel[0].Target
+        Coverage = $recentModel[0].Coverage
+        Status = $recentEntry.Status
+    })
     $recentTickers[$recentTicker] = $true
     if ($recentRows.Count -eq $recentUpdateCount) {
         break
@@ -488,10 +505,10 @@ foreach ($recentTicker in $candidateRecentTickers) {
 
 $recentLines = New-Object 'System.Collections.Generic.List[string]'
 $recentLines.Add($recentStartMarker)
-$recentLines.Add('| Ticker | Sector | Latest earnings |')
-$recentLines.Add('| --- | --- | --- |')
+$recentLines.Add('| Ticker | Sector | Latest earnings | Status |')
+$recentLines.Add('| --- | --- | --- | --- |')
 foreach ($row in $recentRows) {
-    $recentLines.Add("| [$($row.Ticker)]($($row.Target)) | $($row.Sector) | $($row.Coverage) |")
+    $recentLines.Add("| [$($row.Ticker)]($($row.Target)) | $($row.Sector) | $($row.Coverage) | $($row.Status) |")
 }
 $recentLines.Add($recentEndMarker)
 $recentTable = $recentLines -join [System.Environment]::NewLine
@@ -523,12 +540,12 @@ else {
 if ($content.Contains($recentStartMarker) -and $content.Contains($recentEndMarker)) {
     $recentPattern = [regex]::Escape($recentStartMarker) + '.*?' + [regex]::Escape($recentEndMarker)
     $content = [regex]::Replace($content, $recentPattern, $recentTable, [System.Text.RegularExpressions.RegexOptions]::Singleline)
-    $content = $content.Replace('## Recent updates', '## Recent model updates')
+    $content = $content.Replace('## Recent updates', '## Model update tracker').Replace('## Recent model updates', '## Model update tracker')
 }
 else {
     $coverageHeading = '## Coverage'
     $coverageHeadingIndex = $content.IndexOf($coverageHeading, [System.StringComparison]::Ordinal)
-    $recentSection = "## Recent model updates$([System.Environment]::NewLine)$([System.Environment]::NewLine)$recentTable$([System.Environment]::NewLine)$([System.Environment]::NewLine)"
+    $recentSection = "## Model update tracker$([System.Environment]::NewLine)$([System.Environment]::NewLine)$recentTable$([System.Environment]::NewLine)$([System.Environment]::NewLine)"
     if ($coverageHeadingIndex -ge 0) {
         $content = $content.Insert($coverageHeadingIndex, $recentSection)
     }

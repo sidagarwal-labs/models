@@ -1,12 +1,18 @@
 # Financial Models
 
-## Recent model updates
+## Model update tracker
 
 <!-- recent-updates:start -->
-| Ticker | Sector | Latest earnings |
-| --- | --- | --- |
-| [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 |
-| [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 |
+| Ticker | Sector | Latest earnings | Status |
+| --- | --- | --- | --- |
+| [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Q2 2026 | Updated |
+| [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Q3 2026 | Pending |
+| [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Q4 2025 | Pending |
+| [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Q4 2025 | Pending |
+| [MU](Tech/PC/MU.xlsx) | Tech / PC | FQ2 2026 | Pending |
+| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Q3 2026 | Pending |
+| [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 | Updated |
+| [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 | Updated |
 <!-- recent-updates:end -->
 
 ## Coverage
@@ -91,7 +97,7 @@
 | [RBRK](Tech/Cloud/RBRK.xlsx) | Tech / Cloud | Q2 2026 |
 | [ORCL](Tech/PC/ORCL.xlsx) | Tech / Cloud, Tech / PC | FQ4 2025 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 |
-| [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Q4 2025 |
+| [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Q2 2026 |
 | [BABA](Tech/Consumer%20Software/BABA.xlsx) | Tech / Consumer Software | FQ4 2025 |
 | [BIDU](Tech/Consumer%20Software/BIDU.xlsx) | Tech / Consumer Software | Q4 2025 |
 | [CHGG](Tech/Consumer%20Software/CHGG.xlsx) | Tech / Consumer Software | Q3 2024 |
