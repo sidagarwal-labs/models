@@ -4,9 +4,9 @@
 
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
-| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Pending | Q3 2026 |
 | [APP](Entertainment/APP.xlsx) | Entertainment | Pending | Q1 2025 |
 | [NFLX](Entertainment/NFLX.xlsx) | Entertainment | Pending | Q4 2025 |
+| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Updated (Aug 7, 2026) | Q4 2026 |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Updated (Aug 7, 2026) | Q1 2027 |
 | [MU](Tech/PC/MU.xlsx) | Tech / PC | Updated (Aug 7, 2026) | FQ3 2026 |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
@@ -119,7 +119,7 @@
 | [NVDA](Tech/PC/NVDA.xlsx) | Tech / PC | Q3 2026 |
 | [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Q4 2024 |
 | [SMCI](Tech/PC/SMCI.xlsx) | Tech / PC | Q2 2024 |
-| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Q3 2026 |
+| [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Q4 2026 |
 | [STX](Tech/PC/STX.xlsx) | Tech / PC | Q2 2026 |
 | [TSM](Tech/PC/TSM.xlsx) | Tech / PC | Q4 2025 |
 | [GALT](Tech/PC/Quantum/GALT.xlsx) | Tech / PC / Quantum | Q3 2024 |
