@@ -5,12 +5,12 @@
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Pending | Q3 2026 |
-| [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Pending | Q4 2025 |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Pending | Q4 2025 |
 | [MU](Tech/PC/MU.xlsx) | Tech / PC | Pending | FQ2 2026 |
 | [SNDK](Tech/PC/SNDK.xlsx) | Tech / PC | Pending | Q3 2026 |
 | [APP](Entertainment/APP.xlsx) | Entertainment | Pending | Q1 2025 |
 | [NFLX](Entertainment/NFLX.xlsx) | Entertainment | Pending | Q4 2025 |
+| [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Updated (Aug 7, 2026) | Q2 2026 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | Updated (Jul 31, 2026) | FQ3 2026 |
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | Updated (Jul 31, 2026) | FQ4 2026 |
@@ -101,7 +101,7 @@
 | [BIDU](Tech/Consumer%20Software/BIDU.xlsx) | Tech / Consumer Software | Q4 2025 |
 | [CHGG](Tech/Consumer%20Software/CHGG.xlsx) | Tech / Consumer Software | Q3 2024 |
 | [DUOL](Tech/Consumer%20Software/DUOL.xlsx) | Tech / Consumer Software | Q3 2025 |
-| [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Q4 2025 |
+| [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Q2 2026 |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Q4 2025 |
 | [RDDT](Tech/Consumer%20Software/RDDT.xlsx) | Tech / Consumer Software | Q3 2025 |
 | [SHOP](Tech/Consumer%20Software/SHOP.xlsx) | Tech / Consumer Software | Q2 2025 |
