@@ -29,3 +29,19 @@ Current queue as of Aug 7, 2026.
 | [ABNB](Entertainment/ABNB.xlsx) | Entertainment | Pending | Q4 2022 |
 | [SPOT](Entertainment/SPOT.xlsx) | Entertainment | Pending | Q4 2024 |
 | [NIKE](Clothing/NIKE.xlsx) | Clothing | Pending | FQ4 2024 |
+| [NET](Tech/Cloud/NET.xlsx) | Tech / Cloud | Pending | Q2 2024 |
+| [SMCI](Tech/PC/SMCI.xlsx) | Tech / PC | Pending | Q2 2024 |
+| [ASML](Tech/PC/ASML.xlsx) | Tech / PC | Pending | Q3 2024 |
+| [CRWV](Tech/PC/CRWV.xlsx) | Tech / PC | Pending | Q2 2024 |
+| [CRM](Tech/Productivity/CRM.xlsx) | Tech / Productivity | Pending | Q2 2024 |
+| [PANW](Tech/Cloud/PANW.xlsx) | Tech / Cloud | Pending | Q4 2024 |
+| [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Pending | Q4 2024 |
+| [AMD](Tech/PC/AMD.xlsx) | Tech / PC | Pending | Q2 2025 |
+| [ALAB](Tech/PC/ALAB.xlsx) | Tech / PC | Pending | Q2 2025 |
+| [TSM](Tech/PC/TSM.xlsx) | Tech / PC | Pending | Q4 2025 |
+| [MRVL](Tech/Productivity/MRVL.xlsx) | Tech / Productivity | Pending | Q4 2025 |
+| [IONQ](Tech/PC/Quantum/IONQ.xlsx) | Tech / PC / Quantum | Pending | Q4 2024 |
+| [NBIS](Tech/PC/NBIS.xlsx) | Tech / PC | Pending | Q1 2025 |
+| [ZS](Tech/Productivity/ZS.xlsx) | Tech / Productivity | Pending | Q3 2025 |
+| [AVGO](Tech/PC/AVGO.xlsx) | Tech / PC | Pending | FQ4 2025 |
+| [ORCL](Tech/PC/ORCL.xlsx) | Tech / Cloud, Tech / PC | Pending | FQ4 2025 |
