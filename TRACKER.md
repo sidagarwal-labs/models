@@ -33,7 +33,6 @@ Current queue as of Aug 8, 2026.
 | [CRM](Tech/Productivity/CRM.xlsx) | Tech / Productivity | Pending | Q2 2024 |
 | [PANW](Tech/Cloud/PANW.xlsx) | Tech / Cloud | Pending | Q4 2024 |
 | [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Pending | Q4 2024 |
-| [AMD](Tech/PC/AMD.xlsx) | Tech / PC | Pending | Q2 2025 |
 | [ALAB](Tech/PC/ALAB.xlsx) | Tech / PC | Pending | Q2 2025 |
 | [TSM](Tech/PC/TSM.xlsx) | Tech / PC | Pending | Q4 2025 |
 | [MRVL](Tech/Productivity/MRVL.xlsx) | Tech / Productivity | Pending | Q4 2025 |

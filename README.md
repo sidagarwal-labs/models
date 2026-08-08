@@ -95,7 +95,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [SNAP](Tech/Consumer%20Software/SNAP.xlsx) | Tech / Consumer Software | Q2 2025 | Not announced |
 | [SOUN](Tech/Consumer%20Software/SOUN.xlsx) | Tech / Consumer Software | Q4 2024 | Not announced |
 | [ALAB](Tech/PC/ALAB.xlsx) | Tech / PC | Q2 2025 | Not announced |
-| [AMD](Tech/PC/AMD.xlsx) | Tech / PC | Q2 2025 | Not announced |
+| [AMD](Tech/PC/AMD.xlsx) | Tech / PC | Q2 2026 | Not announced |
 | [ARM](Tech/PC/ARM.xlsx) | Tech / PC | Q1 2027 | Not announced |
 | [ASML](Tech/PC/ASML.xlsx) | Tech / PC | Q3 2024 | Not announced |
 | [AVGO](Tech/PC/AVGO.xlsx) | Tech / PC | FQ4 2025 | Sep 3, 2026 |
