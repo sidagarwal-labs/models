@@ -79,7 +79,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 | Not announced |
 | [NET](Tech/Cloud/NET.xlsx) | Tech / Cloud | Q2 2024 | Not announced |
 | [PANW](Tech/Cloud/PANW.xlsx) | Tech / Cloud | Q4 2024 | Sep 1, 2026 |
-| [PLTR](Tech/Cloud/PLTR.xlsx) | Tech / Cloud | Q3 2025 | Not announced |
+| [PLTR](Tech/Cloud/PLTR.xlsx) | Tech / Cloud | Q2 2026 | Not announced |
 | [RBRK](Tech/Cloud/RBRK.xlsx) | Tech / Cloud | Q2 2026 | Aug 27, 2026 |
 | [ORCL](Tech/PC/ORCL.xlsx) | Tech / Cloud, Tech / PC | FQ4 2025 | Sep 8, 2026 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 | Not announced |

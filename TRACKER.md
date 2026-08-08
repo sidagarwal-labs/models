@@ -6,7 +6,6 @@ Current queue as of Aug 7, 2026.
 | --- | --- | --- | --- |
 | [LULU](Clothing/LULU.xlsx) | Clothing | Pending | Q1 2025 |
 | [DDOG](Tech/Cloud/DDOG.xlsx) | Tech / Cloud | Pending | Q1 2025 |
-| [PLTR](Tech/Cloud/PLTR.xlsx) | Tech / Cloud | Pending | Q3 2025 |
 | [HUBS](Tech/Cloud/HUBS.xlsx) | Tech / Cloud | Pending | Q4 2025 |
 | [INTC](Tech/PC/INTC.xlsx) | Tech / PC | Pending | Q3 2024 |
 | [STX](Tech/PC/STX.xlsx) | Tech / PC | Pending | Q2 2026 |
