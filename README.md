@@ -73,7 +73,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [PFE](Pharma/PFE.xlsx) | Pharma | Q4 2024 | Not announced |
 | [UNH](Pharma/UNH.xlsx) | Pharma | Q4 2025 | Not announced |
 | [CSCO](Tech/Cloud/CSCO.xlsx) | Tech / Cloud | Not listed | Aug 12, 2026 |
-| [DDOG](Tech/Cloud/DDOG.xlsx) | Tech / Cloud | Q1 2025 | Not announced |
+| [DDOG](Tech/Cloud/DDOG.xlsx) | Tech / Cloud | Q2 2026 | Not announced |
 | [HUBS](Tech/Cloud/HUBS.xlsx) | Tech / Cloud | Q4 2025 | Not announced |
 | [MDB](Tech/Cloud/MDB.xlsx) | Tech / Cloud | Q3 2025 | Sep 1, 2026 |
 | [MSFT](Tech/Cloud/MSFT.xlsx) | Tech / Cloud | FQ4 2026 | Not announced |
