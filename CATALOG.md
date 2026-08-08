@@ -1,6 +1,6 @@
 # Model Catalog
 
-This catalog is generated from the 130 Excel workbooks in the repository. Select a filename to open its GitHub file page and download the workbook for full review in Excel.
+This catalog is generated from the 131 Excel workbooks in the repository. Select a filename to open its GitHub file page and download the workbook for full review in Excel.
 
 ## Root models
 
@@ -21,6 +21,7 @@ This catalog is generated from the 130 Excel workbooks in the repository. Select
 - [ASTS.xlsx](Aviation/ASTS.xlsx)
 - [BA.xlsx](Aviation/BA.xlsx)
 - [RKLB.xlsx](Aviation/RKLB.xlsx)
+- [SPCX.xlsx](Aviation/SPCX.xlsx)
 
 ## Clothing
 

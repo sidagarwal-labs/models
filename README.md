@@ -11,6 +11,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [ASTS](Aviation/ASTS.xlsx) | Aviation | Q1 2025 | Aug 10, 2026 |
 | [BA](Aviation/BA.xlsx) | Aviation | Q4 2023 | Not announced |
 | [RKLB](Aviation/RKLB.xlsx) | Aviation | Q3 2024 | Aug 10, 2026 |
+| [SPCX](Aviation/SPCX.xlsx) | Aviation | Q2 2026 | TBD |
 | [ADDYY](Clothing/ADDYY.xlsx) | Clothing | Not listed | TBD |
 | [LULU](Clothing/LULU.xlsx) | Clothing | Q1 2025 | Sep 3, 2026 |
 | [NIKE](Clothing/NIKE.xlsx) | Clothing | FQ4 2024 | TBD |
