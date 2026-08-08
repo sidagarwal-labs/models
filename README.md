@@ -1,5 +1,7 @@
 # Financial Models
 
+[Monthly research notes](NOTES.md)
+
 ## Coverage
 
 Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activity/earnings) as of Aug 7, 2026. `Not announced` means the source explicitly has no upcoming date; `TBD` means the lookup was unsupported or unresolved.
