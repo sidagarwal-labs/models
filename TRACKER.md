@@ -7,7 +7,6 @@ Current queue as of Aug 8, 2026.
 | [LULU](Clothing/LULU.xlsx) | Clothing | Pending | Q1 2025 |
 | [HUBS](Tech/Cloud/HUBS.xlsx) | Tech / Cloud | Pending | Q4 2025 |
 | [INTC](Tech/PC/INTC.xlsx) | Tech / PC | Pending | Q3 2024 |
-| [STX](Tech/PC/STX.xlsx) | Tech / PC | Pending | Q2 2026 |
 | [DUOL](Tech/Consumer%20Software/DUOL.xlsx) | Tech / Consumer Software | Pending | Q3 2025 |
 | [RDDT](Tech/Consumer%20Software/RDDT.xlsx) | Tech / Consumer Software | Pending | Q3 2025 |
 | [SHOP](Tech/Consumer%20Software/SHOP.xlsx) | Tech / Consumer Software | Pending | Q2 2025 |
