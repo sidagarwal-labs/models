@@ -39,7 +39,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [BULL](Finance/BULL.xlsx) | Finance | Q1 2025 | Aug 19, 2026 |
 | [CHYM](Finance/CHYM.xlsx) | Finance | Q3 2022 | Not announced |
 | [CRCL](Finance/CRCL.xlsx) | Finance | Q1 2025 | Not announced |
-| [HOOD](Finance/HOOD.xlsx) | Finance | Q3 2025 | Not announced |
+| [HOOD](Finance/HOOD.xlsx) | Finance | Q2 2026 | Not announced |
 | [JPM](Finance/JPM.xlsx) | Finance | Q4 2022 | Not announced |
 | [MSTR](Finance/MSTR.xlsx) | Finance | Q1 2025 | Not announced |
 | [NU](Finance/NU.xlsx) | Finance | Q4 2024 | Aug 13, 2026 |

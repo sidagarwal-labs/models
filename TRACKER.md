@@ -1,6 +1,6 @@
 # Model Update Tracker
 
-Current queue as of Aug 7, 2026.
+Current queue as of Aug 8, 2026.
 
 | Ticker | Sector | Status | Latest earnings |
 | --- | --- | --- | --- |
@@ -19,7 +19,6 @@ Current queue as of Aug 7, 2026.
 | [MCD](Food/MCD.xlsx) | Food | Pending | Q1 2024 |
 | [KO](Food/KO.xlsx) | Food | Pending | Q1 2024 |
 | [DASH](Food/DASH.xlsx) | Food | Pending | Q2 2025 |
-| [HOOD](Finance/HOOD.xlsx) | Finance | Pending | Q3 2025 |
 | [PYPL](Finance/PYPL.xlsx) | Finance | Pending | Q4 2025 |
 | [TSLA](EV/TSLA.xlsx) | EV | Pending | Q4 2025 |
 | [DIS](Entertainment/DIS.xlsx) | Entertainment | Pending | FQ3 2024 |
