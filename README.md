@@ -93,7 +93,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [DUOL](Tech/Consumer%20Software/DUOL.xlsx) | Tech / Consumer Software | Q3 2025 | Not announced |
 | [GOOGL](Tech/Consumer%20Software/GOOGL.xlsx) | Tech / Consumer Software | Q2 2026 | Not announced |
 | [META](Tech/Consumer%20Software/META.xlsx) | Tech / Consumer Software | Q2 2026 | Not announced |
-| [RDDT](Tech/Consumer%20Software/RDDT.xlsx) | Tech / Consumer Software | Q3 2025 | Not announced |
+| [RDDT](Tech/Consumer%20Software/RDDT.xlsx) | Tech / Consumer Software | Q2 2026 | Not announced |
 | [SHOP](Tech/Consumer%20Software/SHOP.xlsx) | Tech / Consumer Software | Q2 2025 | Not announced |
 | [SNAP](Tech/Consumer%20Software/SNAP.xlsx) | Tech / Consumer Software | Q2 2025 | Not announced |
 | [SOUN](Tech/Consumer%20Software/SOUN.xlsx) | Tech / Consumer Software | Q4 2024 | Not announced |
