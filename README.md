@@ -37,7 +37,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [MBLY](EV/MBLY.xlsx) | EV | Q4 2024 | Not announced |
 | [NIO](EV/NIO.xlsx) | EV | Q4 2023 | Sep 1, 2026 |
 | [RIVN](EV/RIVN.xlsx) | EV | Q3 2023 | Not announced |
-| [TSLA](EV/TSLA.xlsx) | EV | Q4 2025 | Not announced |
+| [TSLA](EV/TSLA.xlsx) | EV | Q2 2026 | Not announced |
 | [BRK_](Finance/BRK_.xlsx) | Finance | Q4 2021 | TBD |
 | [BULL](Finance/BULL.xlsx) | Finance | Q1 2025 | Aug 19, 2026 |
 | [CHYM](Finance/CHYM.xlsx) | Finance | Q3 2022 | Not announced |

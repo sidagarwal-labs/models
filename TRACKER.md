@@ -17,7 +17,6 @@ Current queue as of Aug 9, 2026.
 | [KO](Food/KO.xlsx) | Food | Pending | Q1 2024 |
 | [DASH](Food/DASH.xlsx) | Food | Pending | Q2 2025 |
 | [PYPL](Finance/PYPL.xlsx) | Finance | Pending | Q4 2025 |
-| [TSLA](EV/TSLA.xlsx) | EV | Pending | Q4 2025 |
 | [DIS](Entertainment/DIS.xlsx) | Entertainment | Pending | FQ3 2024 |
 | [ABNB](Entertainment/ABNB.xlsx) | Entertainment | Pending | Q4 2022 |
 | [SPOT](Entertainment/SPOT.xlsx) | Entertainment | Pending | Q4 2024 |
