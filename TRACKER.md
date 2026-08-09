@@ -20,7 +20,6 @@ Current queue as of Aug 9, 2026.
 | [PYPL](Finance/PYPL.xlsx) | Finance | Pending | Q4 2025 |
 | [TSLA](EV/TSLA.xlsx) | EV | Pending | Q4 2025 |
 | [DIS](Entertainment/DIS.xlsx) | Entertainment | Pending | FQ3 2024 |
-| [RBLX](Entertainment/RBLX.xlsx) | Entertainment | Pending | Q3 2025 |
 | [ABNB](Entertainment/ABNB.xlsx) | Entertainment | Pending | Q4 2022 |
 | [SPOT](Entertainment/SPOT.xlsx) | Entertainment | Pending | Q4 2024 |
 | [NIKE](Clothing/NIKE.xlsx) | Clothing | Pending | FQ4 2024 |

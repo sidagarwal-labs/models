@@ -29,7 +29,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [EA](Entertainment/EA.xlsx) | Entertainment | FQ4 2025 | TBD |
 | [GME](Entertainment/GME.xlsx) | Entertainment | Q1 2024 | Sep 8, 2026 |
 | [NFLX](Entertainment/NFLX.xlsx) | Entertainment | Q2 2026 | Not announced |
-| [RBLX](Entertainment/RBLX.xlsx) | Entertainment | Q3 2025 | Not announced |
+| [RBLX](Entertainment/RBLX.xlsx) | Entertainment | Q1 2026 | Not announced |
 | [SONY](Entertainment/SONY.xlsx) | Entertainment | Q4 2023 | Not announced |
 | [SPOT](Entertainment/SPOT.xlsx) | Entertainment | Q4 2024 | Not announced |
 | [CVNA](EV/CVNA.xlsx) | EV | Q4 2025 | Not announced |
