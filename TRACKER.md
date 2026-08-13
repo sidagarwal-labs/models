@@ -24,7 +24,6 @@ Current queue as of Aug 12, 2026.
 | [NET](Tech/Cloud/NET.xlsx) | Tech / Cloud | Pending | Q2 2024 |
 | [SMCI](Tech/PC/SMCI.xlsx) | Tech / PC | Pending | Q2 2024 |
 | [ASML](Tech/PC/ASML.xlsx) | Tech / PC | Pending | Q3 2024 |
-| [CRWV](Tech/PC/CRWV.xlsx) | Tech / PC | Pending | Q2 2024 |
 | [CRM](Tech/Productivity/CRM.xlsx) | Tech / Productivity | Pending | Q2 2024 |
 | [PANW](Tech/Cloud/PANW.xlsx) | Tech / Cloud | Pending | Q4 2024 |
 | [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Pending | Q4 2024 |
