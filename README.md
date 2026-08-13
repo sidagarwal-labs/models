@@ -105,7 +105,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [CRWV](Tech/PC/CRWV.xlsx) | Tech / PC | Q2 2024 | Aug 11, 2026 |
 | [INTC](Tech/PC/INTC.xlsx) | Tech / PC | Q3 2024 | Not announced |
 | [MU](Tech/PC/MU.xlsx) | Tech / PC | FQ3 2026 | Sep 22, 2026 |
-| [NBIS](Tech/PC/NBIS.xlsx) | Tech / PC | Q1 2025 | Aug 12, 2026 |
+| [NBIS](Tech/PC/NBIS.xlsx) | Tech / PC | Q2 2026 | Not announced |
 | [NVDA](Tech/PC/NVDA.xlsx) | Tech / PC | Q3 2026 | Aug 26, 2026 |
 | [QCOM](Tech/PC/QCOM.xlsx) | Tech / PC | Q4 2024 | Not announced |
 | [SMCI](Tech/PC/SMCI.xlsx) | Tech / PC | Q2 2024 | Aug 11, 2026 |
