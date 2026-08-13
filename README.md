@@ -23,7 +23,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [OPEN](Construction/OPEN.xlsx) | Construction | Q4 2025 | Not announced |
 | [ABNB](Entertainment/ABNB.xlsx) | Entertainment | Q4 2022 | Not announced |
 | [AMC](Entertainment/AMC.xlsx) | Entertainment | Q4 2024 | Not announced |
-| [APP](Entertainment/APP.xlsx) | Entertainment | Q1 2026 | Not announced |
+| [APP](Entertainment/APP.xlsx) | Entertainment | Q2 2026 | Not announced |
 | [ATVI](Entertainment/ATVI.xlsx) | Entertainment | Q4 2023 | TBD |
 | [DIS](Entertainment/DIS.xlsx) | Entertainment | FQ3 2024 | Not announced |
 | [EA](Entertainment/EA.xlsx) | Entertainment | FQ4 2025 | TBD |
