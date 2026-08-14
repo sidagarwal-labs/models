@@ -32,5 +32,4 @@ Current queue as of Aug 12, 2026.
 | [MRVL](Tech/Productivity/MRVL.xlsx) | Tech / Productivity | Pending | Q4 2025 |
 | [IONQ](Tech/PC/Quantum/IONQ.xlsx) | Tech / PC / Quantum | Pending | Q4 2024 |
 | [ZS](Tech/Productivity/ZS.xlsx) | Tech / Productivity | Pending | Q3 2025 |
-| [AVGO](Tech/PC/AVGO.xlsx) | Tech / PC | Pending | FQ4 2025 |
 | [ORCL](Tech/PC/ORCL.xlsx) | Tech / Cloud, Tech / PC | Pending | FQ4 2025 |
