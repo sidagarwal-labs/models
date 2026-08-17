@@ -2,9 +2,9 @@
 
 Monthly observations and working forecasts.
 
-## August 2026
+## AI CapEx
 
-### AI CapEx
+### August 2026
 
 #### FY2026 Guidance
 
@@ -38,7 +38,9 @@ Monthly observations and working forecasts.
 | FY2030 | ~$1.6T |
 | FY2031 | ~$1.65T |
 
-### Cloud Growth
+## Cloud Growth
+
+### August 2026
 
 | Company | Platform | Q2 revenue | Q2 growth | FY2026 guidance |
 | --- | --- | ---: | ---: | ---: |
