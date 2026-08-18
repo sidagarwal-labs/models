@@ -17,20 +17,102 @@ DRAM is the family: HBM, DDR, and GDDR are different forms of it. TLC NAND store
 
 Typical bandwidth order: accelerator HBM `3-8+ TB/s`, one DDR5 channel `38-51 GB/s`, one PCIe 4/5 NVMe SSD `7-14 GB/s`, and one nearline HDD `0.25-0.30 GB/s`.
 
-## Provider Supply and Expansion
+## Demand to Memory Bottleneck
 
-Supply is not reported on one common basis. For DRAM and NAND, track bit shipments, node mix, HBM allocation, wafer capacity, and capex. For HDDs, track nearline exabytes, units, average TB per drive, and the highest capacity qualified for volume production.
+This is an order-of-magnitude planning model, not a forecast. A useful volume anchor is Google's July 2026 disclosure that its models process [22B API tokens per minute](https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/), equal to `31.7T tokens/day`. This is not automatically physical compute demand because vendor counters can mix cached input, uncached prefill, output, and hidden reasoning tokens. Industry volume is higher because the disclosure excludes other providers, consumer surfaces, private inference, training, and non-text models.
 
-| Provider | Supply position | Current production signal | Expansion / timing | Source type |
-| --- | --- | --- | --- | --- |
-| Samsung | DRAM, HBM, NAND, and eSSD; 39% Q2 2026 DRAM revenue share | HBM4 and SOCAMM2 mass-product sales started in Q1 2026 despite limited memory supply | Increase HBM4 base-die supply and expand DDR5, SOCAMM2, GDDR7, and AI-oriented TLC SSD sales during 2026; absolute capacity not disclosed | [Company earnings](https://news.samsung.com/global/samsung-electronics-announces-first-quarter-2026-results); market share is an analyst estimate |
-| SK hynix / Solidigm | DRAM, HBM, NAND, and eSSD; 26% Q2 2026 DRAM revenue share | HBM4 mass shipments began in Q2 with a larger H2 ramp; 321-layer NAND is the largest production share | Target 321-layer NAND at ~50% of domestic capacity by year-end; accelerate M15X and open Yongin Phase 1 cleanroom in early 2027; P&T7 and M17 follow in phases | [Company earnings](https://news.skhynix.com/en/q2-2026-business-results/); announced plan |
-| Micron (MU) | DRAM, HBM, NAND, and SSD; 25% Q2 2026 DRAM revenue share | HBM4, G9 PCIe Gen6 SSDs, and 245TB QLC SSDs are in high-volume shipment or initial shipment | $7.1B net capex in FQ3 2026; HBM4E volume production expected in 2027; no HBM stack volume disclosed | [SEC-filed company release](https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm); reported plus guidance |
-| Kioxia + Sandisk (SNDK) | Joint NAND manufacturing with separate product portfolios; do not count the same JV wafers twice | Sandisk's Q4 volume growth contributed about one-third of its 51% sequential revenue increase | Customer agreements cover ~50% of FY2027 bits and ~two-thirds of FY2028 bits; BiCS10 QLC targets 60% more bit density than BiCS8, while 9th-gen 2Tb QLC reaches 4.8Gb/s | [Sandisk Investor Day](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-13-sandisk-investor-day-2026) and [technology release](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-12-kioxia-and-sandisk-unveil-new-high-performance-qlc-3d-flash-memory-for-ai-and-data-intensive-apps); reported plus targets |
-| Western Digital (WDC) | HDD supplier after the February 2025 Sandisk separation; no NAND supply in continuing operations | Q4 FY2026 revenue was $3.75B; the release does not disclose units or nearline exabytes | UltraSMR, ePMR, and HAMR portfolio plus High Bandwidth Drive and dual-pivot technologies targeting 4x HDD throughput; volume ramp not quantified | [Company earnings](https://www.westerndigital.com/company/newsroom/press-releases/2026/2026-08-05-wd-reports-fiscal-fourth-quarter-and-fiscal-year-2026-financial-results) and [Computex roadmap](https://www.westerndigital.com/company/newsroom/press-releases/2026/2026-06-01-wd-at-computex-2026); reported plus projection |
-| Seagate (STX) | Nearline HDD and mass-capacity storage; HAMR is the main density expansion path | Mozaic 4+ is qualified and in production with two hyperscale customers at capacities up to 44TB | Ramp 4TB-per-platter HAMR to raise exabytes per shipped drive; public release does not provide wafer-like capacity or a unit ramp | [Company product release](https://www.seagate.com/stories/articles/seagate-delivers-industrys-highest-capacity-hard-drives-with-next-generation-mozaic-4); reported qualification and production status |
+### Conversion Chain
 
-The Samsung, SK hynix, and Micron percentages are DRAM **revenue** shares from [Counterpoint Research](https://counterpointresearch.com/en/insights/ai-demand-reshapes-dram-rankings-in-q2-2026), not wafer starts, bit output, or HBM share. Revenue share moves with product mix and price, so use it as market position rather than physical supply.
+`users and agents -> tokens/day -> inference throughput -> accelerators -> HBM -> host DRAM and storage -> power`
+
+- `average tokens/s = tokens/day / 86,400`
+- `compute FLOP/s ~= 2 * active parameters * tokens/s`
+- `compute-floor GPUs = FLOP/s / effective GPU FLOP/s`
+- `practical fleet = tokens/s / achieved tokens/s/GPU * peak factor / schedulable fraction`
+- `HBM = practical fleet * HBM/GPU`
+
+The compute formula uses **active** parameters; HBM must hold **total** model weights plus KV cache. This distinction makes large mixture-of-experts models memory-heavy even when only a fraction of their parameters execute for each token.
+
+For a first-pass conversion, treat one output or hidden-reasoning token as one compute-equivalent token, then discount cached and highly parallel input tokens based on observed serving cost. As demand intuition, `1B MAU * 20% DAU * 5K tokens/day` is only `1T tokens/day`, while `100M agents * 10 tokens/s` is `86.4T tokens/day`. Persistent agents can therefore overtake human chat without another billion users.
+
+### Reference Assumptions
+
+| Input | Planning value | Basis |
+| --- | ---: | --- |
+| H100-equivalent HBM | 80 GB; 3.35 TB/s | [NVIDIA H100](https://www.nvidia.com/en-us/data-center/h100/) |
+| Effective arithmetic throughput | 400 TFLOP/s | Conservative fraction of peak FP8/BF16 after serving overhead |
+| Peak / average demand | 2.0x | Diurnal and burst headroom assumption |
+| Schedulable fleet | 70% | Allows for fragmentation, maintenance, failures, and reserved headroom |
+| Host DRAM / accelerator | 250 GB | [DGX B200](https://www.nvidia.com/en-us/data-center/dgx-b200/) design point: 2 TB per eight GPUs |
+| Local NVMe / accelerator | 3.84 TB | DGX B200 design point: 30.72 TB per eight GPUs |
+| Allocated node IT power | 1.5 kW / accelerator | Planning value below DGX B200's 14.3 kW / eight-GPU maximum; excludes PUE |
+
+Achieved throughput is deliberately modeled as a range. Decode is usually memory-bandwidth bound, and latency targets, context length, model routing, quantization, and batching can change tokens/GPU-second by more than 10x. NVIDIA likewise distinguishes parallel prefill from memory-bound autoregressive [decode](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/).
+
+### 2026 Inference Scenarios
+
+| Scenario | Compute-equivalent tokens/day | Average active parameters | Achieved tokens/s per H100-equivalent | Compute floor | Practical serving fleet | HBM | Node IT power |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Low / routed models | 32T | 10B | 5,000 | 53K | 0.21M | 17 PB | 0.32 GW |
+| Base / mixed workloads | 100T | 30B | 2,000 | 0.50M | 1.65M | 132 PB | 2.48 GW |
+| High / reasoning-heavy | 300T | 70B | 750 | 3.47M | 13.2M | 1.06 EB | 19.8 GW |
+
+The practical fleet includes the 2x peak and 70% schedulable assumptions; it excludes training, embeddings, image/video generation, and disaster-recovery replicas. The gap between the compute floor and practical fleet is the size of the serving penalty from HBM bandwidth, latency, batching limits, and utilization.
+
+### Downstream Memory Footprint
+
+| Scenario | Host DRAM at 250 GB/GPU | Local NVMe at 3.84 TB/GPU | Interpretation |
+| --- | ---: | ---: | --- |
+| Low | 53 PB | 0.81 EB | Large but readily tiered across regions |
+| Base | 0.41 EB | 6.35 EB | Material demand for server DDR5 and enterprise SSDs |
+| High | 3.31 EB | 50.8 EB | Requires major datacenter and storage-fleet expansion |
+
+These DRAM and NVMe figures are DGX-like design points, not unavoidable ratios. Disaggregated storage, shared model caches, and CPU-light serving can reduce them. HBM is much less optional because weights and active KV cache must remain close to the accelerator for low-latency inference.
+
+### Why HBM Binds Before Peak FLOPs
+
+- A 70B model occupies about `70 GB` at FP8 or `140 GB` at BF16 before runtime buffers and KV cache. It barely fits, or does not fit, on one 80 GB H100.
+- A Llama-2-like 70B model with grouped-query attention uses about `0.33 MB` of BF16 KV cache per token. One 128K-token live context is therefore about `42 GB`; concurrent contexts multiply this requirement.
+- Reading 70 GB of FP8 weights against 3.35 TB/s gives a batch-1 ceiling near `48 decode steps/s` per H100-equivalent before kernels, communication, KV reads, and other overhead. Batching amortizes weight reads but consumes more KV memory and can worsen latency.
+- Quantization roughly halves weight traffic from BF16 to FP8. Continuous batching and paged KV caches raise throughput, but they do not make bandwidth or capacity free.
+
+### Demand Versus Supply Envelope
+
+The [tracked FY2026 capex](ai-capex.md) is about `$750B` across the largest buyers. If `15-25%` funds accelerator-bearing systems at `$50K-$80K` per physical slot, the spending envelope is roughly **1.4M-3.8M new high-end accelerator slots**. At `80-180 GB HBM/slot`, those systems embody roughly **0.11-0.68 EB of HBM**.
+
+This is a financing envelope, not verified fab output. Physical H100, B200, TPU, and custom-ASIC slots are not performance-equivalent, and training competes for the same supply. Still, it gives a useful scale comparison:
+
+| Scenario | Fleet versus 1.4M-3.8M annual slot envelope | HBM versus 0.11-0.68 EB envelope |
+| --- | ---: | ---: |
+| Low | 6-15% | 3-15% |
+| Base | 44-118% | 20-117% |
+| High | 3.5-9.4x | 1.6-9.4x |
+
+### Supplier Response
+
+| Supplier | 2026 supply / expansion signal | Bottleneck effect |
+| --- | --- | --- |
+| Samsung | [HBM4 and SOCAMM2 mass-product sales](https://news.samsung.com/global/samsung-electronics-announces-first-quarter-2026-results); increasing HBM4 base-die supply amid limited memory availability | Direct HBM relief, but no public stack-volume target |
+| SK hynix / Solidigm | [HBM4 mass shipments began in Q2](https://news.skhynix.com/en/q2-2026-business-results/) with an H2 ramp; M15X accelerated and Yongin Phase 1 cleanroom planned for early 2027 | Strongest near-term HBM response; company still says demand exceeds supply capability |
+| Micron | [HBM4 in high-volume shipment](https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm), HBM4E planned for 2027, and $7.1B net capex in FQ3 2026 | Direct HBM relief; next large product step arrives in 2027 |
+| Kioxia + Sandisk | Customer agreements cover [~50% of FY2027 bits and ~two-thirds of FY2028 bits](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-13-sandisk-investor-day-2026); BiCS10 QLC targets 60% higher bit density than BiCS8 | Expands NAND/SSD supply, not accelerator HBM; much future output is already committed |
+| Western Digital + Seagate | WD is HDD-only after the Sandisk separation; Seagate's [44TB Mozaic 4+](https://www.seagate.com/stories/articles/seagate-delivers-industrys-highest-capacity-hard-drives-with-next-generation-mozaic-4) is qualified and in production with two hyperscalers | Improves corpus and archive economics but does not relieve online decode or KV-cache limits |
+
+Supplier language therefore supports a tight rather than loose HBM market. Newer accelerators improve throughput, but they also increase HBM per package and rack power.
+
+### Bottleneck Ranking
+
+| Layer | 2026 tightness | Reason |
+| --- | --- | --- |
+| HBM capacity and bandwidth | Very high | Weight fit, KV cache, and decode bandwidth all bind; qualified stacks are allocated with GPUs |
+| Deployable accelerator systems | Very high | Advanced packaging, networking, liquid cooling, racks, and power must arrive together |
+| Grid and datacenter power | Very high | Base text inference alone implies ~2.5 GW IT load, or ~3.0 GW at 1.2 PUE |
+| GPU arithmetic | High, but not first | Practical serving needs ~3.3x the base-case FLOP floor |
+| Server DDR5 | Medium-high | Roughly 2-4x HBM capacity per node and competes for DRAM wafers |
+| Enterprise SSD | Medium | Several TB/GPU is useful, but storage can be shared and disaggregated |
+| HDD | Low for online inference | Important for corpora and archives, but outside the token-generation latency path |
+
+**Working conclusion:** the base case is tight but plausible; it consumes an order-one share of one year's high-end deployment envelope. A 3x increase from hidden reasoning or agent loops raises the base case to about `5M H100-equivalents`, `0.40 EB HBM`, and `7.4 GW` of node IT power. At that point, supply is clearly constrained unless routing, quantization, caching, and newer accelerators improve effective tokens per watt and per HBM byte at a similar rate.
 
 ## Normalized Metrics
 
@@ -82,7 +164,5 @@ Latency is an order-of-magnitude access class, not a directly comparable benchma
 | Client SSD contract proxy | Quarterly | [TrendForce client SSD](https://www.trendforce.com/price/flash/pcc_oem_ssd_contract) |
 | Fixed enterprise SSD and HDD SKUs | Monthly | [DiskPrices](https://diskprices.com/) |
 | HDD reliability by model | Quarterly | [Backblaze Drive Stats](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data) |
-| Provider bit growth, HBM allocation, node mix, and capex | Quarterly | Company earnings and investor presentations |
-| Fab, packaging, NAND-density, and HDD qualification milestones | Event-driven | Company newsrooms and regulatory filings |
 
 Specifications: [Solidigm D5-P5430](https://www.solidigm.com/products/data-center/d5/p5430.html) and [Western Digital data-center HDDs](https://www.westerndigital.com/products/internal-drives/data-center-drives/ultrastar-dc-hc690-hdd).
