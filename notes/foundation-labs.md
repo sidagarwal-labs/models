@@ -22,6 +22,24 @@ Calendar-year recognized revenue, treated as FY for this notebook. These are ran
 
 OpenAI's prior internal plan is increasingly stale but remains the best public year-by-year anchor. Anthropic's FY2027 range is informed by an external forecast of ~$115B run rate by May 2027.
 
+## Codex User Growth
+
+| Date | Users | Status |
+| --- | ---: | --- |
+| 2026-02-05 | 1M | Reported by Baker |
+| 2026-03-06 | 2M | Reported by Baker |
+| 2026-04-01 | 3M | Reported by Baker |
+| 2026-04-21 | 4M | Reported by Baker |
+| 2026-05-31 | 5M | Reported by Baker |
+| 2026-07-12 | 6M | Reported by Baker |
+| 2026-07-13 | 7M | Reported by Baker |
+| 2026-07-14 | 8M | Reported by Baker |
+| 2026-07-16 | 9M | Reported by Baker |
+| 2026-07-21 | 10M | Reported by Baker |
+| 2026-08-02 | 15M | Predicted; not an observed milestone |
+
+Source: [Gavin Baker on X](https://x.com/GavinSBaker), transcribed from his milestone post. "Users" is retained as stated because the active-user period and methodology were not independently specified.
+
 ## Valuation Snapshot
 
 | Company | Run rate (date) | Valuation (date) | Value/run rate | Profitability signal |
