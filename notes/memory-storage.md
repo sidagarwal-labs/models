@@ -17,6 +17,21 @@ DRAM is the family: HBM, DDR, and GDDR are different forms of it. TLC NAND store
 
 Typical bandwidth order: accelerator HBM `3-8+ TB/s`, one DDR5 channel `38-51 GB/s`, one PCIe 4/5 NVMe SSD `7-14 GB/s`, and one nearline HDD `0.25-0.30 GB/s`.
 
+## Provider Supply and Expansion
+
+Supply is not reported on one common basis. For DRAM and NAND, track bit shipments, node mix, HBM allocation, wafer capacity, and capex. For HDDs, track nearline exabytes, units, average TB per drive, and the highest capacity qualified for volume production.
+
+| Provider | Supply position | Current production signal | Expansion / timing | Source type |
+| --- | --- | --- | --- | --- |
+| Samsung | DRAM, HBM, NAND, and eSSD; 39% Q2 2026 DRAM revenue share | HBM4 and SOCAMM2 mass-product sales started in Q1 2026 despite limited memory supply | Increase HBM4 base-die supply and expand DDR5, SOCAMM2, GDDR7, and AI-oriented TLC SSD sales during 2026; absolute capacity not disclosed | [Company earnings](https://news.samsung.com/global/samsung-electronics-announces-first-quarter-2026-results); market share is an analyst estimate |
+| SK hynix / Solidigm | DRAM, HBM, NAND, and eSSD; 26% Q2 2026 DRAM revenue share | HBM4 mass shipments began in Q2 with a larger H2 ramp; 321-layer NAND is the largest production share | Target 321-layer NAND at ~50% of domestic capacity by year-end; accelerate M15X and open Yongin Phase 1 cleanroom in early 2027; P&T7 and M17 follow in phases | [Company earnings](https://news.skhynix.com/en/q2-2026-business-results/); announced plan |
+| Micron (MU) | DRAM, HBM, NAND, and SSD; 25% Q2 2026 DRAM revenue share | HBM4, G9 PCIe Gen6 SSDs, and 245TB QLC SSDs are in high-volume shipment or initial shipment | $7.1B net capex in FQ3 2026; HBM4E volume production expected in 2027; no HBM stack volume disclosed | [SEC-filed company release](https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm); reported plus guidance |
+| Kioxia + Sandisk (SNDK) | Joint NAND manufacturing with separate product portfolios; do not count the same JV wafers twice | Sandisk's Q4 volume growth contributed about one-third of its 51% sequential revenue increase | Customer agreements cover ~50% of FY2027 bits and ~two-thirds of FY2028 bits; BiCS10 QLC targets 60% more bit density than BiCS8, while 9th-gen 2Tb QLC reaches 4.8Gb/s | [Sandisk Investor Day](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-13-sandisk-investor-day-2026) and [technology release](https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-12-kioxia-and-sandisk-unveil-new-high-performance-qlc-3d-flash-memory-for-ai-and-data-intensive-apps); reported plus targets |
+| Western Digital (WDC) | HDD supplier after the February 2025 Sandisk separation; no NAND supply in continuing operations | Q4 FY2026 revenue was $3.75B; the release does not disclose units or nearline exabytes | UltraSMR, ePMR, and HAMR portfolio plus High Bandwidth Drive and dual-pivot technologies targeting 4x HDD throughput; volume ramp not quantified | [Company earnings](https://www.westerndigital.com/company/newsroom/press-releases/2026/2026-08-05-wd-reports-fiscal-fourth-quarter-and-fiscal-year-2026-financial-results) and [Computex roadmap](https://www.westerndigital.com/company/newsroom/press-releases/2026/2026-06-01-wd-at-computex-2026); reported plus projection |
+| Seagate (STX) | Nearline HDD and mass-capacity storage; HAMR is the main density expansion path | Mozaic 4+ is qualified and in production with two hyperscale customers at capacities up to 44TB | Ramp 4TB-per-platter HAMR to raise exabytes per shipped drive; public release does not provide wafer-like capacity or a unit ramp | [Company product release](https://www.seagate.com/stories/articles/seagate-delivers-industrys-highest-capacity-hard-drives-with-next-generation-mozaic-4); reported qualification and production status |
+
+The Samsung, SK hynix, and Micron percentages are DRAM **revenue** shares from [Counterpoint Research](https://counterpointresearch.com/en/insights/ai-demand-reshapes-dram-rankings-in-q2-2026), not wafer starts, bit output, or HBM share. Revenue share moves with product mix and price, so use it as market position rather than physical supply.
+
 ## Normalized Metrics
 
 | Layer | Cost | Performance | Reliability / efficiency |
@@ -67,5 +82,7 @@ Latency is an order-of-magnitude access class, not a directly comparable benchma
 | Client SSD contract proxy | Quarterly | [TrendForce client SSD](https://www.trendforce.com/price/flash/pcc_oem_ssd_contract) |
 | Fixed enterprise SSD and HDD SKUs | Monthly | [DiskPrices](https://diskprices.com/) |
 | HDD reliability by model | Quarterly | [Backblaze Drive Stats](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data) |
+| Provider bit growth, HBM allocation, node mix, and capex | Quarterly | Company earnings and investor presentations |
+| Fab, packaging, NAND-density, and HDD qualification milestones | Event-driven | Company newsrooms and regulatory filings |
 
 Specifications: [Solidigm D5-P5430](https://www.solidigm.com/products/data-center/d5/p5430.html) and [Western Digital data-center HDDs](https://www.westerndigital.com/products/internal-drives/data-center-drives/ultrastar-dc-hc690-hdd).
