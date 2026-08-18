@@ -38,15 +38,24 @@ Do not convert NAND wafer prices to finished-drive $/TB without yield and packag
 
 ## August 2026 Baseline
 
-| Market signal | Price | Normalized | Source type | Limitation |
-| --- | ---: | ---: | --- | --- |
-| HBM4 launch pricing | >30% premium | Relative to prior generation | Contract estimate | No transparent spot or public $/GB market; HBM3e debuted near a 20% premium |
-| DDR5 16Gb 4800/5600 | $52.733 per 2GB die | $26.37/GB | Spot | Commodity die, not a qualified server RDIMM |
-| 1TB TLC PCIe value SSD | $270.10 per drive | $270.10/TB | Q2 client OEM contract | Client SSD proxy; enterprise contracts differ |
-| Solidigm D5-P5430 7.68TB QLC NVMe | $2,944 | $383/TB; $421/(GB/s) | New retail listing | Up to 7.0 GB/s; retail is not fleet contract pricing |
-| Seagate Exos X24 24TB HDD | $960 | $40/TB; $3,368/(GB/s) | New retail listing | Uses 0.285 GB/s maximum sustained transfer; retail is not fleet pricing |
+Latency is an order-of-magnitude access class, not a directly comparable benchmark. Prior-year values marked **derived** divide the August 2026 endpoint by its reported year-over-year multiplier; they are not observed historical quotes.
 
-HBM, server DRAM, and enterprise SSD contract prices are mostly paid or negotiated. Track public spot/retail figures as fixed-SKU proxies and preserve product, capacity, interface, condition, source, and observation date.
+| Date | Type of memory / storage | Storage / capacity | Latency | Price | Source type |
+| --- | --- | ---: | --- | ---: | --- |
+| Jul 2025 | HBM3 12-Hi stack | 24 GB | ~100 ns class; system-dependent | ~$192/stack ($8.01/GB) | Derived prior-year endpoint from [reported indicative allocation pricing](https://memoryindex.io/hbm-price) |
+| Jul 2026 | HBM3 12-Hi stack | 24 GB | ~100 ns class; system-dependent | ~$200/stack ($8.33/GB) | Reported indicative allocation level; no open spot market |
+| Jul 2025 | HBM3e 12-Hi stack | 36 GB | ~100 ns class; system-dependent | ~$263/stack ($7.31/GB) | Derived prior-year endpoint from [reported indicative allocation pricing](https://memoryindex.io/hbm-price) |
+| Jul 2026 | HBM3e 12-Hi stack | 36 GB | ~100 ns class; system-dependent | ~$300/stack ($8.33/GB) | Reported indicative allocation level; no open spot market |
+| Aug 4, 2025 | DDR5 16Gb 4800/5600 die | 2 GB | Tens of ns; platform-dependent | ~$9.09/die ($4.55/GB) | Derived prior-year endpoint from the reported +480% YoY move |
+| Aug 4, 2026 | DDR5 16Gb 4800/5600 die | 2 GB | Tens of ns; platform-dependent | $52.733/die ($26.37/GB) | [TrendForce](https://www.trendforce.com/price/dram/dram_spot) spot print; not a server RDIMM |
+| Q2 2025 | Enterprise QLC NVMe SSD | 30.72 TB | ~0.1 ms class; workload-dependent | ~$1,755/drive ($57/TB) | Modeled prior-year endpoint from an estimated series |
+| Q2 2026 | Enterprise QLC NVMe SSD | 30.72 TB | ~0.1 ms class; workload-dependent | ~$4,650/drive ($151/TB) | [TrendForce-based](https://memoryindex.io/ssd-prices) contract estimate |
+| Aug 5, 2025 | Retail NVMe SSD market average | 2 TB | ~0.1 ms class; model mix | ~$118/drive ($59/TB) | Derived prior-year endpoint from the reported +220% YoY move |
+| Aug 5, 2026 | Retail NVMe SSD market average | 2 TB | ~0.1 ms class; model mix | $378/drive ($189/TB) | [Retail tracker](https://rampricehistory.com/ssd/us/2tb-nvme); reported market average |
+| Aug 2026 | Solidigm D5-P5430 QLC NVMe | 7.68 TB | ~0.1 ms read class | $2,944 ($383/TB) | New retail listing; not fleet contract pricing |
+| Aug 2026 | Seagate Exos X24 HDD | 24 TB | 4.16 ms rotational; seek extra | $960 ($40/TB) | New retail listing; not fleet contract pricing |
+
+`Reported` means the cited source printed the endpoint, `derived` is arithmetic on reported inputs, and `estimate` has no public transaction print. HBM and enterprise SSD contracts are negotiated; retail figures are fixed-product or market-basket proxies. Preserve the product, capacity, interface, condition, source, and observation date on every update.
 
 ## Update Cadence
 
