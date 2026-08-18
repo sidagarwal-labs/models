@@ -36,9 +36,9 @@ Use decimal units consistently:
 
 Do not convert NAND wafer prices to finished-drive $/TB without yield and packaging data. Do not compare HBM $/GB directly with SSD or HDD $/TB.
 
-## August 2026 Baseline
+## August 2026 Baseline and Endpoints
 
-Latency is an order-of-magnitude access class, not a directly comparable benchmark. Prior-year values marked **derived** divide the August 2026 endpoint by its reported year-over-year multiplier; they are not observed historical quotes.
+Latency is an order-of-magnitude access class, not a directly comparable benchmark. This table compares prior-year and current endpoints; it is not a monthly history. Prior-year values marked **derived** divide the August 2026 endpoint by its reported year-over-year multiplier and are not observed historical quotes.
 
 | Date | Type of memory / storage | Storage / capacity | Latency | Price | Source type |
 | --- | --- | ---: | --- | ---: | --- |
