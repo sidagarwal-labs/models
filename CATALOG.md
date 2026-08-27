@@ -1,16 +1,19 @@
 # Model Catalog
 
-This catalog is generated from the 131 Excel workbooks in the repository. Select a filename to open its GitHub file page and download the workbook for full review in Excel.
+This catalog is generated from the 134 Excel workbooks in the repository. Select a filename to open its GitHub file page and download the workbook for full review in Excel.
 
 ## Root models
 
 - [\[SAMPLE\].xlsx](%5BSAMPLE%5D.xlsx)
+- [DCF Valuation.xlsx](DCF%20Valuation.xlsx)
+- [Ideas.xlsx](Ideas.xlsx)
 - [United States.xlsx](United%20States.xlsx)
 
 ## [models]
 
 - [AI - Main.xlsx](%5Bmodels%5D/AI%20-%20Main.xlsx)
 - [Nvidia DCF.xlsx](%5Bmodels%5D/Nvidia%20DCF.xlsx)
+- [Recommendations.xlsx](%5Bmodels%5D/Recommendations.xlsx)
 - [Software - Main.xlsx](%5Bmodels%5D/Software%20-%20Main.xlsx)
 - [Websites.xlsx](%5Bmodels%5D/Websites.xlsx)
 
