@@ -1,5 +1,19 @@
 # Foundation Labs
 
+Reviewed September 8, 2026. The new items are adoption and inference economics, not a newly confirmed private-company revenue or valuation figure. The July run-rate and August valuation baselines below retain their original dates.
+
+## September Operating Update
+
+- [OpenAI's September 8 CFO update](https://openai.com/index/the-work-now-within-reach/) reports product reach above 1B weekly active users and 2.5M businesses. These are not paid subscriptions, recognized revenue, or contracted ARR. See [AI adoption](ai-adoption.md) for the separate denominators.
+- [Anthropic's September 1 Fable 5.1 announcement](https://www.anthropic.com/claude-fable-and-mythos-5-1) lists cache reads at **$0.25 per million tokens**, 75% below the preceding rate. Ordinary input/output prices remain **$10/$50 per million tokens**. The distinction matters: a cache-heavy agent can become cheaper without a comparable change in the headline input/output price.
+- Anthropic reports roughly 25% lower typical workload cost and up to roughly 45% for highly agentic workloads. These are vendor-measured workload results, not a guaranteed customer saving. Cache mix, reasoning effort, retries, context length, and task success all affect the result.
+
+### Effective Inference Cost
+
+Track `cost per successful task = total billed cost across attempts / successfully completed tasks` for a fixed task set and quality threshold. Record uncached input, cache reads/writes, output tokens, tool costs, latency, success rate, and reasoning settings. A cheaper token does not necessarily mean a cheaper successful task; a higher leaderboard score does not establish commercial margins.
+
+Useful next evidence: paid usage/retention, gross margin definitions, cash burn, and compute commitments with delivery dates. Do not raise the revenue scenarios solely because a new model was released or an adoption total grew.
+
 ## Revenue Run Rate
 
 Selected reported annualized revenue run-rate milestones. These are not contracted ARR or recognized annual revenue.
@@ -13,14 +27,14 @@ _OpenAI's $40B was confirmed by CNBC from investor slides. Anthropic's latest $6
 
 ## Working Revenue Projections
 
-Calendar-year recognized revenue, treated as FY for this notebook. These are ranges, not company guidance.
+Calendar-year recognized revenue scenarios retained from the August note. These are research ranges, not newly verified company guidance.
 
-| Company | FY2026 | FY2027 | FY2028 | Basis |
+| Company | CY2026 | CY2027 | CY2028 | Basis |
 | --- | ---: | ---: | ---: | --- |
 | OpenAI | $35B-$40B | $60B-$75B | $100B-$120B | $40B July run rate; prior internal plan implied ~$30B / ~$60B / ~$100B |
 | Anthropic | $50B-$60B | $100B-$130B | $190B-$200B | $4.8B Q1, >=$10.9B Q2, >$65B July run rate; FY2028 company projection |
 
-OpenAI's prior internal plan is increasingly stale but remains the best public year-by-year anchor. Anthropic's FY2027 range is informed by an external forecast of ~$115B run rate by May 2027.
+OpenAI's prior internal plan is increasingly stale but remains the best public year-by-year anchor. Anthropic's CY2027 scenario is informed by an external forecast of ~$115B run rate by May 2027; that run-rate forecast is not the same as recognized calendar-year revenue.
 
 ## Codex User Growth
 
@@ -36,9 +50,10 @@ OpenAI's prior internal plan is increasingly stale but remains the best public y
 | 2026-07-14 | 8M | Reported by Baker |
 | 2026-07-16 | 9M | Reported by Baker |
 | 2026-07-21 | 10M | Reported by Baker |
-| 2026-08-02 | 15M | Predicted; not an observed milestone |
 
 Source: [Gavin Baker on X](https://x.com/GavinSBaker), transcribed from his milestone post. "Users" is retained as stated because the active-user period and methodology were not independently specified.
+
+The prior August 2 projection of 15M users remains unverified and is excluded from the observed-milestone table. It must not be treated as a realized observation merely because its date has passed.
 
 ## Valuation Snapshot
 
@@ -51,7 +66,7 @@ _Multiples are directional because the revenue and valuation dates differ._
 
 ## Mega-Cap Benchmarks
 
-Market caps at the August 17, 2026 close; financials are TTM.
+Historical snapshot: market caps at the August 17, 2026 close; financials as recorded then. This is not a current valuation table. NVIDIA's August 26 earnings below postdate it, so do not combine a new earnings denominator with these old market caps without explicitly rebuilding the comparison.
 
 | Company | Market cap | Revenue | Growth | Gross margin | Net income | P/S |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -63,5 +78,16 @@ Market caps at the August 17, 2026 close; financials are TTM.
 | [Meta](https://stockanalysis.com/stocks/meta/statistics/) | $1.45T | $228.2B | 27.7% | 81.8% | $68.1B | 6.4x |
 
 Private run rates and public GAAP revenue are not like-for-like. Lab gross margins, losses, and compute commitments are needed before treating public-company multiples as direct comps.
+
+## New Supplier Evidence
+
+These observations concern infrastructure suppliers, not revenue earned by the foundation-model labs. They help test whether announced spending is reaching vendors but do not establish return on investment for the customers.
+
+| Release | Period and reported result | Forward guidance | Source |
+| --- | --- | --- | --- |
+| NVIDIA, August 26 | FY2027 Q2 ended July 26: total revenue $96.221B; Data Center $89.0B, +117% y/y; GAAP gross margin 75.0%; free cash flow $21.341B | FY2027 Q3 total revenue $108B +/-2%, not Data Center-only guidance | [NVIDIA release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027) |
+| Broadcom, September 2 | FY2026 Q3 ended August 2: total revenue $29.591B; AI semiconductor revenue $16.7B, +221% y/y; free cash flow $13.665B | FY2026 Q4 AI semiconductor revenue $21.7B; total revenue $34.8B | [Broadcom release](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial) |
+
+NVIDIA's Data Center category and Broadcom's AI semiconductor category are not identical market definitions. Guidance is prospective, not achieved revenue. Compare cash conversion and working capital alongside revenue rather than extrapolating one fast-growth quarter into perpetual demand.
 
 Lab sources: [OpenAI July run rate](https://www.cnbc.com/2026/08/14/openai-cfo-friar-tells-investors-that-enterprise-bigger-than-consumer.html), [OpenAI historical plan](https://epoch.ai/gradient-updates/openai-is-projecting-unprecedented-revenue-growth), [OpenAI estimates](https://sacra.com/c/openai/), [Anthropic official May update](https://www.anthropic.com/news/series-h), [Anthropic July run rate](https://www.reuters.com/technology/anthropic-revenue-run-rate-tops-65-billion-source-says-2026-08-17/), [Anthropic FY2028 projection](https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/), and [external forecasts](https://futuresearch.ai/anthropic-financial-forecast/).

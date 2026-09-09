@@ -1,6 +1,6 @@
 # Financial Models
 
-[Monthly research notes](NOTES.md)
+[Monthly research notes](notes/README.md)
 
 ## Coverage
 

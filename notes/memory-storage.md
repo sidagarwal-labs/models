@@ -2,6 +2,12 @@
 
 HBM and DDR are volatile memory. NAND and HDD are persistent media; an SSD is a device built from NAND, a controller, and usually DRAM. For AI, HBM is the critical accelerator bottleneck, while SSDs and HDDs hold data outside the compute path.
 
+## September 8 Update
+
+[TrendForce's DDR5 16Gb (2Gx8) 4800/5600 spot average](https://www.trendforce.com/price/dram/dram_spot) is **$54.333 per die**, updated September 8, 2026 at 18:10 GMT+8. Against the August 4 baseline recorded below ($52.733), that is **+3.03%**. This is a change between two dated endpoints, not a calendar-month return. A 16Gb die is 2 GB, so the current implied chip price is about $27.17/GB; it is not a finished server RDIMM, NAND, or HBM quote.
+
+The compute table now distinguishes the raw arithmetic floor from provisioned arithmetic capacity. The previous "Compute floor" values already included peak/utilization headroom despite the formula omitting it. The practical fleet, HBM, and power scenarios are unchanged. Other historical price and supplier entries below retain their original source dates; this review does not make them fresh transaction quotes.
+
 ## Stack
 
 | Layer | What it is | Main AI role | Importance |
@@ -28,6 +34,7 @@ This is an order-of-magnitude planning model, not a forecast. A useful volume an
 - `average tokens/s = tokens/day / 86,400`
 - `compute FLOP/s ~= 2 * active parameters * tokens/s`
 - `compute-floor GPUs = FLOP/s / effective GPU FLOP/s`
+- `provisioned compute GPUs = compute-floor GPUs * peak factor / schedulable fraction`
 - `practical fleet = tokens/s / achieved tokens/s/GPU * peak factor / schedulable fraction`
 - `HBM = practical fleet * HBM/GPU`
 
@@ -51,13 +58,13 @@ Achieved throughput is deliberately modeled as a range. Decode is usually memory
 
 ### 2026 Inference Scenarios
 
-| Scenario | Compute-equivalent tokens/day | Average active parameters | Achieved tokens/s per H100-equivalent | Compute floor | Practical serving fleet | HBM | Node IT power |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Low / routed models | 32T | 10B | 5,000 | 53K | 0.21M | 17 PB | 0.32 GW |
-| Base / mixed workloads | 100T | 30B | 2,000 | 0.50M | 1.65M | 132 PB | 2.48 GW |
-| High / reasoning-heavy | 300T | 70B | 750 | 3.47M | 13.2M | 1.06 EB | 19.8 GW |
+| Scenario | Compute-equivalent tokens/day | Average active parameters | Achieved tokens/s per H100-equivalent | Raw compute floor | Provisioned compute | Practical serving fleet | HBM | Node IT power |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Low / routed models | 32T | 10B | 5,000 | 18.5K | 52.9K | 0.21M | 17 PB | 0.32 GW |
+| Base / mixed workloads | 100T | 30B | 2,000 | 0.174M | 0.496M | 1.65M | 132 PB | 2.48 GW |
+| High / reasoning-heavy | 300T | 70B | 750 | 1.22M | 3.47M | 13.2M | 1.06 EB | 19.8 GW |
 
-The practical fleet includes the 2x peak and 70% schedulable assumptions; it excludes training, embeddings, image/video generation, and disaster-recovery replicas. The gap between the compute floor and practical fleet is the size of the serving penalty from HBM bandwidth, latency, batching limits, and utilization.
+Both provisioned compute and practical fleet include the 2x peak and 70% schedulable assumptions exactly once. The raw arithmetic floor includes neither. All exclude training, embeddings, image/video generation, and disaster-recovery replicas. In the base case, practical serving needs about 3.33x the provisioned arithmetic capacity, or 9.52x the raw arithmetic floor. Comparing the provisioned columns isolates the throughput penalty assumed for serving instead of mixing it with capacity headroom.
 
 ### Downstream Memory Footprint
 
@@ -78,7 +85,7 @@ These DRAM and NVMe figures are DGX-like design points, not unavoidable ratios. 
 
 ### Demand Versus Supply Envelope
 
-The [tracked FY2026 capex](ai-capex.md) is about `$750B` across the largest buyers. If `15-25%` funds accelerator-bearing systems at `$50K-$80K` per physical slot, the spending envelope is roughly **1.4M-3.8M new high-end accelerator slots**. At `80-180 GB HBM/slot`, those systems embody roughly **0.11-0.68 EB of HBM**.
+Use a rounded **$750B spending scenario**, not a verified industry capex total. The [capex worksheet](ai-capex.md) contains estimates with differing or unresolved reporting periods and definitions; it cannot be summed into a comparable annual actual. Holding $750B as an explicit sensitivity input, if `15-25%` funds accelerator-bearing systems at `$50K-$80K` per physical slot, the spending envelope is roughly **1.4M-3.8M new high-end accelerator slots**. At `80-180 GB HBM/slot`, those systems embody roughly **0.11-0.68 EB of HBM**.
 
 This is a financing envelope, not verified fab output. Physical H100, B200, TPU, and custom-ASIC slots are not performance-equivalent, and training competes for the same supply. Still, it gives a useful scale comparison:
 
@@ -107,12 +114,12 @@ Supplier language therefore supports a tight rather than loose HBM market. Newer
 | HBM capacity and bandwidth | Very high | Weight fit, KV cache, and decode bandwidth all bind; qualified stacks are allocated with GPUs |
 | Deployable accelerator systems | Very high | Advanced packaging, networking, liquid cooling, racks, and power must arrive together |
 | Grid and datacenter power | Very high | Base text inference alone implies ~2.5 GW IT load, or ~3.0 GW at 1.2 PUE |
-| GPU arithmetic | High, but not first | Practical serving needs ~3.3x the base-case FLOP floor |
+| GPU arithmetic | High, but not first | Practical serving needs ~3.3x the base-case provisioned arithmetic capacity, or ~9.5x the raw floor |
 | Server DDR5 | Medium-high | Roughly 2-4x HBM capacity per node and competes for DRAM wafers |
 | Enterprise SSD | Medium | Several TB/GPU is useful, but storage can be shared and disaggregated |
 | HDD | Low for online inference | Important for corpora and archives, but outside the token-generation latency path |
 
-**Working conclusion:** the base case is tight but plausible; it consumes an order-one share of one year's high-end deployment envelope. A 3x increase from hidden reasoning or agent loops raises the base case to about `5M H100-equivalents`, `0.40 EB HBM`, and `7.4 GW` of node IT power. At that point, supply is clearly constrained unless routing, quantization, caching, and newer accelerators improve effective tokens per watt and per HBM byte at a similar rate.
+**Working conclusion:** under the stated spending and deployment assumptions, the base case consumes an order-one share of the modeled annual deployment envelope. That is a scenario comparison, not independent proof of a shortage. A 3x increase from hidden reasoning or agent loops raises the base case to about `5M H100-equivalents`, `0.40 EB HBM`, and `7.4 GW` of node IT power. This puts pressure on that envelope unless routing, quantization, caching, and newer accelerators improve effective tokens per watt and per HBM byte at a similar rate.
 
 ## Normalized Metrics
 

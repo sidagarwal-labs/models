@@ -1,5 +1,46 @@
 # GPU & Memory Prices
 
+Reviewed September 8, 2026. New observations below are kept separate from the August worksheet. Advertised cloud rates, executed-transaction benchmarks, and forward capacity prices answer different questions.
+
+## September 8 Provider Check
+
+[CoreWeave's North America price list](https://www.coreweave.com/pricing), observed September 8. Raw prices are for an **eight-GPU instance per hour**; normalized columns divide by eight. Spot capacity has different availability and interruption terms from on-demand capacity.
+
+| GPU | GPUs/instance | On-demand $/instance-hour | Spot $/instance-hour | Normalized on-demand $/GPU-hour | Normalized spot $/GPU-hour |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| HGX H100, 80 GB | 8 | $49.24 | $19.71 | $6.155 | $2.464 |
+| HGX H200, 141 GB | 8 | $50.44 | $20.93 | $6.305 | $2.616 |
+| HGX B200, 180 GB | 8 | $68.80 | $34.11 | $8.600 | $4.264 |
+| HGX B300, 270 GB | 8 | Contact sales | $35.84 | Not quoted | $4.480 |
+
+These are advertised observations, not executed trades or guaranteed availability. CoreWeave's separate single-GPU inference price column is restricted to its inference-platform customers; dividing an instance price by eight does not establish that one GPU can be rented independently at that rate. [Spot terms](https://docs.coreweave.com/policies/spot-tos).
+
+[Lambda's displayed eight-GPU instance rates](https://lambda.ai/service/gpu-cloud) remain $3.99 per H100 GPU-hour and $6.69 per B200 GPU-hour, matching the August entries at displayed precision. CoreWeave's corresponding on-demand rates are also unchanged at the prior two-decimal precision. Record this as **checked, unchanged**, not a fresh price decline.
+
+The new measurement is the **spot/on-demand spread**: about 60.0% for CoreWeave H100 and 50.4% for B200 on this observation. It is not a month-over-month move; no comparable earlier spot observation is recorded here. Compare like-for-like nodes, regions, access rights, and interruption terms before interpreting a spread as excess supply.
+
+## Ornn: A Separate Market Benchmark
+
+[Ornn Data](https://ornn.com/product/ornn-data) describes OCPI as a GPU compute benchmark based on executed transactions, rather than scraped rental offers. Its public product material identifies hardware-specific coverage including H100, H200, B200, and B300. [Ornn Compute](https://ornn.com/product/ornn-compute) is the related capacity-access marketplace; a reservation there is distinct from an index observation.
+
+| Source category | What it measures | How to use it |
+| --- | --- | --- |
+| CoreWeave / Lambda list prices | Advertised provider offers for specified configurations | Estimate a particular deployment's advertised cost |
+| Ornn OCPI | Transaction-based reference benchmark, according to Ornn | Candidate signal for market price direction; confirm the exact series definition before comparison |
+| Ornn capacity offers / forwards | Capacity commitments or future delivery terms | Keep separate from a current spot benchmark and on-demand rental |
+
+The [public data portal](https://data.ornn.com/) and [documentation](https://docs.ornn.com/introduction) are useful research starting points. Index weights, eligible transaction terms, geographic scope, historical revisions, and publication frequency need to be established from the applicable methodology before treating OCPI as an apples-to-apples provider comparison. Marketing descriptions alone do not settle those details.
+
+**Publication limit:** Ornn's [Terms of Use, sections 2, 3, and 6](https://ornn.com/terms-of-use), reviewed September 8, require prior written authorization for external republication of its data and restrict systematic collection. This public note therefore links to Ornn but does not reproduce index values, charts, historical series, or API outputs, and does not implement a scraper. Account or API access alone is not republication permission.
+
+Before adding an authorized numeric series, record the series ID, hardware/form factor, memory, observation timestamp and timezone, currency/unit, region, commitment length, node size, availability/SLA, methodology version, and permitted publication scope. A benchmark is not an executable rental quote. Do not label the homepage's illustrative animation as a current observed price.
+
+## What To Track Next
+
+- Provider list-price changes and same-configuration spot spreads, with dated observations rather than carried-forward values presented as fresh quotes.
+- OCPI direction and spot-versus-forward relationships only within the permitted data-access and publication scope.
+- Cost per successfully completed task alongside dollars per GPU-hour. Hardware generation, model quality, cache hit rate, and utilization can change economics without a list-price change.
+
 | Area | Metrics |
 | --- | --- |
 | GPU | FP8/BF16 throughput, tokens/s, power, $/GPU-hour, tokens/$ |
@@ -8,7 +49,7 @@
 | Availability | Regions/zones, access mode, minimum GPU count, launch or reservation status |
 | Usage | GPU-hours, GPU utilization, memory utilization, tokens/s, $/1M tokens |
 
-## August 2026
+## August 2026 Baseline
 
 ### Specialist Clouds
 
