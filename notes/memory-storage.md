@@ -2,6 +2,14 @@
 
 HBM and DDR are volatile memory. NAND and HDD are persistent media; an SSD is a device built from NAND, a controller, and usually DRAM. For AI, HBM is the critical accelerator bottleneck, while SSDs and HDDs hold data outside the compute path.
 
+## October 3 Reading Update
+
+The [a16z Growth September report, page 44](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44), reproduces BNP Paribas's August 2026 illustrative $100 AI-capex allocation: $50 chips, $20 power, $15 networking, $7.50 cooling, and $7.50 facilities/construction. Within chips, $25 is accelerators and $15 is memory ICs. See the [capex note](ai-capex.md#illustrative-allocation-of-each-100) for the full accounting boundary.
+
+This strengthens the reason to track memory, power, and networking alongside accelerators; it does **not** turn the $750B sensitivity envelope below into a verified AI-spending forecast. Accelerator chips are not the same purchase boundary as accelerator-bearing systems, and memory ICs include more than HBM. Applying the illustrative 50% semiconductor share as a GPU-system share would overstate modeled deployment capacity.
+
+The [token-price and GPU-price exhibits](gpu-prices.md#cheaper-tokens-and-compute-demand) add a demand sensitivity rather than a new throughput estimate. Aggregate GPU-hours equal workload volume times GPU-hours per comparable workload. Efficiency can be outweighed by more tasks, longer context, reasoning, or agent loops, but the relative growth rates must be measured. Keep the existing fleet, HBM, and power scenarios unchanged until workload mix and realized serving efficiency justify new inputs. This review does not refresh the September DDR5 observation or the historical memory prices.
+
 ## September 8 Update
 
 [TrendForce's DDR5 16Gb (2Gx8) 4800/5600 spot average](https://www.trendforce.com/price/dram/dram_spot) is **$54.333 per die**, updated September 8, 2026 at 18:10 GMT+8. Against the August 4 baseline recorded below ($52.733), that is **+3.03%**. This is a change between two dated endpoints, not a calendar-month return. A 16Gb die is 2 GB, so the current implied chip price is about $27.17/GB; it is not a finished server RDIMM, NAND, or HBM quote.

@@ -1,6 +1,29 @@
 # Foundation Labs
 
-Reviewed September 8, 2026. The new items are adoption and inference economics, not a newly confirmed private-company revenue or valuation figure. The July run-rate and August valuation baselines below retain their original dates.
+Updated October 3, 2026 with secondary-source revenue and inference-economics evidence from a16z Growth's September report. This is not a newly confirmed private-company revenue or valuation disclosure. The July run-rate and August valuation baselines below retain their original dates.
+
+## October Reading: Revenue Growth And Measurement Boundaries
+
+[Page 23 of the September report](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=23) plots combined OpenAI and Anthropic revenue labeled **ARR**, citing **YipitData as of September 18, 2026**. The final point, **Q3 2026E**, is visually around $130B-$140B of combined annualized run rate. This is an approximate reading of a third-party estimate, not an exact reported number, a completed-quarter actual, or contracted recurring revenue. It should not be allocated between the labs without separate evidence.
+
+The direction is consistent with rapid commercial expansion beyond the older baselines below. It does not establish profitability, cash collection, the absence of customer incentives, or an adequate return on compute commitments. Do not overwrite annual recognized-revenue scenarios or historical valuation multiples with this combined run-rate point.
+
+### Incremental Revenue Is Not Total Revenue
+
+The adjacent comparison argues that the labs' revenue additions are overtaking those of public software companies excluding hyperscalers:
+
+| Year | Public software additions, excluding clouds | OpenAI plus Anthropic additions | Status |
+| --- | ---: | ---: | --- |
+| 2025 | $49B | $23B | Historical amounts labeled in the exhibit; measurement bases need reconciliation |
+| 2026E | $63B | Approximately $100B, shown with a question mark | Estimates, not reported annual results |
+
+The footnote cites CapIQ for public-software revenues and estimates, YipitData for labs, and $74B of lab additions as of September 18 while explicitly saying the full year is unknown. The presentation does not establish a common recognized-revenue basis between public software and the lab/run-rate estimates. Therefore, retain the direction as a research signal, but do not state that the labs have already recognized more 2026 revenue, or more total revenue, than all public software. The question mark and the full-year uncertainty are material, not decoration.
+
+### Falling Inference Prices Can Expand Use
+
+[Page 34](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=34), citing Goldman Sachs / Department of Commerce on July 10, compares a token-price basket and a quality-adjusted model-price measure with the historical PC price index. The slide describes similarly large price deflation occurring over roughly three years for AI versus roughly fifteen years for PCs. These are differently constructed baskets indexed to their respective cycle starts, not identical products or a measured elasticity of demand.
+
+Cheaper successful tasks can bring new uses into scope while reasoning and agentic workloads increase total consumption. The test remains **cost per successful task at fixed quality**, paid usage, and resulting gross profit. A price index alone does not tell us how much margin remains with labs versus customers or infrastructure providers. See [GPU demand and the Jevons hypothesis](gpu-prices.md#cheaper-tokens-and-compute-demand) and [consumer/enterprise adoption](ai-adoption.md).
 
 ## September Operating Update
 

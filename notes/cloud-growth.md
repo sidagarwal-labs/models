@@ -1,6 +1,22 @@
 # Cloud Growth
 
-Reviewed September 8, 2026. Reported segments are not interchangeable: Microsoft Cloud spans several businesses, Intelligent Cloud is a reporting segment, and Azure is a product group within it.
+Updated October 3, 2026 with a16z Growth's September report. The company figures verified September 8 remain dated historical observations. Reported segments are not interchangeable: Microsoft Cloud spans several businesses, Intelligent Cloud is a reporting segment, and Azure is a product group within it.
+
+## Backlog Growth And The Cash-Flow Outlook
+
+[Page 24 of the report](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=24) charts Microsoft RPO, Google Cloud backlog, and Amazon RPO rising sharply to a combined **approximately $1.7T at the plotted Q2 2026 endpoint**. This is an approximate chart reading; its source is labeled "Filings," without a company-by-company reconciliation. The page frames this as demand exceeding supply. Treat it as evidence of a larger contracted-revenue pipeline, not a measurement that all compute products, regions, or capacity types are undersupplied.
+
+The three series differ in segment scope, contract duration, recognition timing, and cancellation or renewal terms. Microsoft's commercial RPO is not Azure-only; the verified definitions below still apply. Backlog can grow because of longer contracts or concentrated commitments before any new capacity is delivered. Check the current portion, conversion into revenue, delivery schedules, customer concentration, and the funding behind counterparties' commitments. Do not add backlog to recognized revenue, or use it as a direct GPU-order or utilization measure.
+
+### Expected Free Cash Flow Is Not Realized Return
+
+The adjacent exhibit cites **FactSet / Goldman Sachs Global Investment Research, August 28, 2026**, for historical and consensus free cash flow across **Amazon, Alphabet, Meta, Microsoft, and Oracle**. Its message is near-term cash-flow pressure followed by recovery around 2028 and substantially stronger cash flow in 2029-2030. The 2027-2030 columns are explicitly estimates; a full-year 2026 bar in an August snapshot is not a completed-year actual either.
+
+The chart contains positive and negative company contributions that must be netted; the top of the positive stack alone is not aggregate FCF. It does not project every hyperscaler to be cash-flow-positive at the same time. Nor is consolidated FCF, which includes advertising, commerce, and other businesses, equivalent to the return on incremental AI infrastructure.
+
+The question is whether revenue and operating cash flow can outgrow cash capex, lease payments, and working-capital needs. Growing profits can fund the buildout, but a consensus recovery also relies on assumptions about future capex growth and utilization. Keep lease treatment and cash-versus-noncash spending aligned with the [capex note](ai-capex.md). The backlog and FCF charts have different company sets and should not be divided into a single unqualified conversion ratio.
+
+For the next update, track recognized cloud revenue and margin, backlog/RPO conversion and duration, cash operating profit, cash PP&E and lease payments, utilization, and revisions to both capex and FCF. A larger backlog alongside repeated FCF downgrades would weaken the interpretation that demand is already turning into attractive investment returns.
 
 ## Verified Microsoft Definitions
 
