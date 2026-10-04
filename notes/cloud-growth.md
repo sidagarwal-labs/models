@@ -1,22 +1,20 @@
 # Cloud Growth
 
-Updated October 3, 2026 with a16z Growth's September report. The company figures verified September 8 remain dated historical observations. Reported segments are not interchangeable: Microsoft Cloud spans several businesses, Intelligent Cloud is a reporting segment, and Azure is a product group within it.
+Research as of October 3, 2026. Cloud backlogs indicate expanding contracted demand, while cash-flow recovery remains a forecast. Company figures verified September 8 retain their original observation dates. Microsoft Cloud spans several businesses, Intelligent Cloud is a reporting segment, and Azure is a product group within it.
 
 ## Backlog Growth And The Cash-Flow Outlook
 
-[Page 24 of the report](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=24) charts Microsoft RPO, Google Cloud backlog, and Amazon RPO rising sharply to a combined **approximately $1.7T at the plotted Q2 2026 endpoint**. This is an approximate chart reading; its source is labeled "Filings," without a company-by-company reconciliation. The page frames this as demand exceeding supply. Treat it as evidence of a larger contracted-revenue pipeline, not a measurement that all compute products, regions, or capacity types are undersupplied.
+Combined Microsoft RPO, Google Cloud backlog, and Amazon RPO reached **approximately $1.7T at the plotted Q2 2026 endpoint** in [a16z Growth's compilation of company filings](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=24). The figure is an approximate visual reading without a company-by-company reconciliation. It supports a larger contracted-revenue pipeline, not the conclusion that every compute product, region, or capacity type is undersupplied.
 
-The three series differ in segment scope, contract duration, recognition timing, and cancellation or renewal terms. Microsoft's commercial RPO is not Azure-only; the verified definitions below still apply. Backlog can grow because of longer contracts or concentrated commitments before any new capacity is delivered. Check the current portion, conversion into revenue, delivery schedules, customer concentration, and the funding behind counterparties' commitments. Do not add backlog to recognized revenue, or use it as a direct GPU-order or utilization measure.
+The three series differ in segment scope, contract duration, recognition timing, and cancellation or renewal terms. Microsoft's commercial RPO is not Azure-only. Longer contracts and concentrated commitments can expand backlog before capacity is delivered; counterparties' funding and the timing of conversion into cash remain important uncertainties. Backlog is neither additive to recognized revenue nor a direct measure of GPU orders or utilization.
 
 ### Expected Free Cash Flow Is Not Realized Return
 
-The adjacent exhibit cites **FactSet / Goldman Sachs Global Investment Research, August 28, 2026**, for historical and consensus free cash flow across **Amazon, Alphabet, Meta, Microsoft, and Oracle**. Its message is near-term cash-flow pressure followed by recovery around 2028 and substantially stronger cash flow in 2029-2030. The 2027-2030 columns are explicitly estimates; a full-year 2026 bar in an August snapshot is not a completed-year actual either.
+Free cash flow across **Amazon, Alphabet, Meta, Microsoft, and Oracle** is expected to remain under near-term pressure before recovering around 2028 and strengthening in 2029-2030, according to **FactSet / Goldman Sachs Global Investment Research, August 28, 2026**. The 2027-2030 values are explicitly estimates; a full-year 2026 figure in an August snapshot is not a completed-year actual either.
 
-The chart contains positive and negative company contributions that must be netted; the top of the positive stack alone is not aggregate FCF. It does not project every hyperscaler to be cash-flow-positive at the same time. Nor is consolidated FCF, which includes advertising, commerce, and other businesses, equivalent to the return on incremental AI infrastructure.
+The aggregate includes positive and negative company contributions that must be netted, not simply the sum of positive cash flows. The forecasts do not imply that every hyperscaler becomes cash-flow-positive at the same time. Consolidated FCF, which includes advertising, commerce, and other businesses, is also not equivalent to the return on incremental AI infrastructure.
 
-The question is whether revenue and operating cash flow can outgrow cash capex, lease payments, and working-capital needs. Growing profits can fund the buildout, but a consensus recovery also relies on assumptions about future capex growth and utilization. Keep lease treatment and cash-versus-noncash spending aligned with the [capex note](ai-capex.md). The backlog and FCF charts have different company sets and should not be divided into a single unqualified conversion ratio.
-
-For the next update, track recognized cloud revenue and margin, backlog/RPO conversion and duration, cash operating profit, cash PP&E and lease payments, utilization, and revisions to both capex and FCF. A larger backlog alongside repeated FCF downgrades would weaken the interpretation that demand is already turning into attractive investment returns.
+Recovery depends on revenue and operating cash flow outgrowing cash capex, lease payments, and working-capital needs. Growing profits can fund investment, but future capex growth and utilization remain assumptions. Lease treatment and cash-versus-noncash spending affect the comparison, as detailed in the [capex note](ai-capex.md). The backlog and FCF estimates also cover different company sets, preventing a single unqualified conversion ratio. Stronger contracts alone do not establish attractive investment returns.
 
 ## Verified Microsoft Definitions
 
@@ -47,7 +45,3 @@ Microsoft's July release reports **$678B of commercial remaining performance obl
 | MSFT | Cloud | $40B | 32% y/y | $160B |
 
 These are the old entries, not a newly verified comparison. The Microsoft scope/value is corrected above; the Google growth rate is verified for **Google Cloud**, not GCP alone. AWS figures and Google's dollar revenue require source revalidation. All three full-year amounts were previously called "guidance" without supporting sources and remain unverified estimates. Do not use that column as management guidance.
-
-## Next Update
-
-Track exact reporting period, revenue scope, reported and constant-currency growth, margin, and backlog conversion with release links. Keep the [capex measure](ai-capex.md) separate from cloud revenue and compare them only after periods are aligned. These definitions were corrected during the September review; the July disclosures themselves are not new September events.

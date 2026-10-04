@@ -1,10 +1,10 @@
 # AI Adoption
 
-Updated October 3, 2026 with a16z Growth's September report. Earlier figures retain their own measurement and disclosure dates; this is not a new verification of every older entry. Product-wide reach, paid seats, businesses, active users, public disclosures, and transaction-sample adoption have different denominators.
+Research as of October 3, 2026. Enterprise deployment and consumer monetization are expanding, but product reach, paid seats, businesses, active users, public disclosures, and transaction samples have different denominators. Earlier figures retain their own observation and disclosure dates.
 
 ## Enterprise Breadth Versus Measured Depth
 
-[Page 27 of the September report](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=27) reproduces **Apollo Daily Spark, September 11, 2026**, on the share of S&P 500 companies making different AI disclosures:
+AI deployment is broad across large companies, while public evidence of sustained impact remains much narrower. [Apollo Daily Spark's September 11, 2026 disclosure analysis](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=27), compiled in a16z Growth's September State of Markets, reports the following shares of S&P 500 companies:
 
 | Disclosure category | Q1 2026 | Q2 2026 | Change |
 | --- | ---: | ---: | ---: |
@@ -16,11 +16,11 @@ Updated October 3, 2026 with a16z Growth's September report. Earlier figures ret
 
 The useful conclusion is **broad deployment disclosure, but limited longitudinal evidence of impact**. Only 2% disclosing a tracked metric does not mean 98% do no internal measurement, nor that just 2% use AI successfully. The categories are not additive and are not a survey of all US businesses. Keep them separate from the Ramp and Census samples below.
 
-The adjacent **AlphaWise / Morgan Stanley Research chart, July 27, 2026**, shows quantifiable AI-impact disclosures rising to approximately 30% of S&P 500 companies and 40% of its survey-adopter cohort in Q2. The latter is a selected adopter sample, not the entire index. Companies reporting multiple benefits are counted once. Together the exhibits support more measurable use, but not a quantified economy-wide productivity or ROI estimate.
+**AlphaWise / Morgan Stanley Research, July 27, 2026**, similarly finds quantifiable AI-impact disclosures rising to approximately 30% of S&P 500 companies and 40% of its survey-adopter cohort in Q2. The latter is a selected adopter sample, not the entire index. Companies reporting multiple benefits are counted once. Together, these findings support more measurable use, but not a quantified economy-wide productivity or ROI estimate.
 
 ## Paid Consumer Use And Retention
 
-[Page 38](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=38) combines several distinct consumer measures:
+Paid participation, subscriber spending, and repeat engagement are increasing in the [PNC and YipitData consumer research](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=38). The measures cover distinct populations and behaviors:
 
 | Measure | Evidence shown | Source and interpretation |
 | --- | --- | --- |
@@ -29,15 +29,15 @@ The adjacent **AlphaWise / Morgan Stanley Research chart, July 27, 2026**, shows
 | Retention across monthly desktop cohorts | Curves rise at later cohort ages, most visibly for ChatGPT | YipitData desktop web-traffic data, September 8, 2026; desktop usage retention is not paid subscription renewal or enterprise retention |
 | Observable paid consumer subscriptions | Chart describes approximately 5x growth since 2025, across ChatGPT, Gemini, Claude, and Perplexity | YipitData e-receipt data, September 8, 2026; the axis is observable subscriptions in thousands, not a census of all US subscriptions or unique paying people |
 
-The joint signal is rising participation, higher spend among subscribers, and repeat engagement. Do not multiply the household-share and spend charts into a market-size estimate without the sample weights, definitions, and matching observation periods. Likewise, upward-sloping retention can reflect reactivation and cohort composition; without the underlying method it is not proof that every cohort's churn improves. Track desktop/mobile coverage, subscription overlap, paid churn, cohort weights, and whether growth survives a fixed-panel comparison.
+The joint signal is rising participation, higher spend among subscribers, and repeat engagement. Household-share and spend estimates cannot be multiplied into a reliable market size without compatible sample weights, definitions, and observation periods. Upward-sloping retention can reflect reactivation and cohort composition; it is not proof that every cohort's churn improves. Desktop/mobile coverage, overlapping subscriptions, and panel composition limit direct comparisons.
 
 ## Technical Employment Evidence
 
-[Page 31](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=31) cites **BLS / The Economist, September 4, 2026**, for employment in software development, math/data science, information security, engineering, and other computer occupations above a broader hiring-trend counterfactual. Its definition is observed jobs minus jobs expected if the sectors had followed that broader trend. This is a modeled employment-level difference, not a count of new hires directly attributable to AI. The software-developer component was below trend during part of 2023-2024 before turning positive.
+Employment in software development, math/data science, information security, engineering, and other computer occupations exceeds a broader hiring-trend counterfactual in [BLS / The Economist research dated September 4, 2026](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=31). This is a modeled employment-level difference: observed jobs minus those expected if the sectors had followed the broader trend, not new hires directly attributable to AI. Software-developer employment was below that trend during part of 2023-2024 before turning positive.
 
-The adjacent Revelio Labs / Ramp comparison reports average changes in entry-level headcount share of +1.15 percentage points for high-intensity AI adopters and -0.52 points for low-intensity adopters, relative to not-yet adopters. This is a relative headcount-share measure, not an economy-wide hiring rate. Adoption selection, firm growth, role definitions, and the comparison design need to be assessed before asserting causation.
+Revelio Labs / Ramp reports average changes in entry-level headcount share of +1.15 percentage points for high-intensity AI adopters and -0.52 points for low-intensity adopters, relative to not-yet adopters. This is a relative headcount-share measure, not an economy-wide hiring rate. Adoption selection, firm growth, role definitions, and the comparison design limit causal interpretation.
 
-These findings argue against assuming that AI adoption uniformly eliminates technical jobs. They do not rule out displacement, hiring weakness in particular occupations or regions, or changes in entry-level task mix. Pair employment stocks with vacancies, realized hiring, hours, pay, and layoffs. The [capex note](ai-capex.md#posted-pay-and-construction-employment) separately covers construction employment and data-center posted-wage premiums; do not add its counterfactual job counts to this series without reconciling scope.
+These findings argue against assuming that AI adoption uniformly eliminates technical jobs. They do not rule out displacement, hiring weakness in particular occupations or regions, or changes in entry-level task mix. The [capex note](ai-capex.md#posted-pay-and-construction-employment) separately covers construction employment and data-center posted-wage premiums; its counterfactual job counts are not automatically additive to this series.
 
 ## September Update And Missing Baselines
 
@@ -48,9 +48,9 @@ These findings argue against assuming that AI adoption uniformly eliminates tech
 | 2026-07-29 | Microsoft 365 Copilot | Paid seats | >30M | Missing baseline added during this review, not news first reported in September. [FY2026 Q4 release](https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast) |
 | 2026-07-22 | Google Antigravity | Weekly active users | >2.4M | Developer-product baseline; not comparable with API developer totals or Codex's unspecified-user milestones. [Google Q2 remarks](https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/) |
 
-**Checked September 8, unchanged at that time:** the [Ramp AI Index](https://ramp.com/data/ai-index) page labeled July 2026 as its latest release and displayed 55.7% for the Ramp sample and 21.6% for the Census comparator. No later Ramp observation is inferred from this report review. Preserve the cohort and survey definition when a new observation arrives.
+**Checked September 8, unchanged at that time:** the [Ramp AI Index](https://ramp.com/data/ai-index) labeled July 2026 as its latest release and displayed 55.7% for the Ramp sample and 21.6% for the Census comparator. These are dated observations, not an October refresh.
 
-The OpenAI disclosure also describes deeper use after signup, but its individual-plan cohort analysis is not evidence that every customer or enterprise seat has the same retention or spending behavior. Track paid usage and retention separately from total reach.
+OpenAI also describes deeper use after signup, but its individual-plan cohort analysis is not evidence that every customer or enterprise seat has the same retention or spending behavior. Total reach, paid usage, and retention remain distinct measures.
 
 ## Enterprise
 
@@ -105,5 +105,3 @@ Gemini MAU sources: [I/O 2025](https://blog.google/innovation-and-ai/technology/
 | 2026-07 | Google models | Monthly developers | >9M | APIs process 22B tokens/minute, up from 16B in Q1 |
 
 Sources: [McKinsey 2025 survey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), [Ramp AI Index](https://ramp.com/data/ai-index), [Census BTOS](https://www.census.gov/hfp/btos/data), [Gallup workplace survey](https://www.gallup.com/workplace/691643/ai-use-work-nearly-doubles-two-years.aspx), [OpenAI](https://openai.com/index/scaling-ai-for-everyone/), [CNBC, August 2026](https://www.cnbc.com/2026/08/14/openai-cfo-friar-tells-investors-that-enterprise-bigger-than-consumer.html), [Google Q2 2026](https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/), [Reuters, October 2025](https://www.reuters.com/business/retail-consumer/anthropic-aims-nearly-triple-annualized-revenue-2026-sources-say-2025-10-15/), [Sacra Anthropic](https://sacra.com/c/anthropic/), and [Reuters, June 2026](https://www.reuters.com/technology/chatgpt-app-hits-1-billion-monthly-active-users-record-time-data-shows-2026-06-02/).
-
-Update cadence: Ramp monthly, Census biweekly, broad surveys annually, and vendor usage metrics when disclosed. For every new row, retain both the observation period and release date, plus the denominator and whether the number is reported, surveyed, estimated, or forecast. Do not interpolate unpublished months or turn product announcements into adoption counts.

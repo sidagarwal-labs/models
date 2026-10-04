@@ -1,59 +1,95 @@
 # AI Buildout: October 2026
 
-Reading dated **October 3, 2026**, based on [a16z Growth's September 2026 State of Markets](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf). The report combines source observations from different dates, largely July-September; these are not newly measured October results. Page references below use the PDF's numbered pages. This is research, not investment advice.
+Research summary as of **October 3, 2026**, drawing on July-September observations compiled in [a16z Growth's September State of Markets](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf). Forecasts are distinguished from reported results. This is research, not investment advice.
 
 ## Summary
 
-The report's strongest argument is that AI investment is meeting expanding commercial demand, not just a technology narrative: capex forecasts have been revised upward, lab run rates and cloud backlogs have grown, and paid consumer use is increasing. Lower inference costs can expand the number and intensity of economically useful workloads while older GPUs retain rental demand.
+AI investment is being accompanied by expanding commercial demand. Hyperscaler capex expectations have risen, foundation-lab revenue run rates and cloud backlogs have grown, and more consumers are paying for AI. Falling inference costs are bringing additional workloads into economic reach without eliminating demand for older GPUs.
 
-The unresolved question is conversion into durable returns. Backlog is not revenue, run rate is not annual revenue, future FCF is still a forecast, and rental-implied asset value is not a resale transaction. Enterprise deployment appears broad, but publicly tracked impact remains sparse. Wage premiums and historical electricity-price estimates describe potential benefits, not a uniform causal outcome for every worker or ratepayer.
+The distinction is between **evidence of demand** and **evidence of durable investment returns**. The former has strengthened. The latter remains dependent on utilization, margins, capital intensity, and cash collection. Enterprise deployment is broad, but publicly documented impact over time is still limited. The economic benefits are also uneven: skilled-labor demand is rising, while electricity-price effects depend on local infrastructure and how costs are allocated.
 
-This is an investor presentation with a positive interpretation of the buildout, drawing on several third-party datasets. The notes preserve that evidence while separating it from the conclusions it does not yet establish.
+## Earnings And Capital Investment
 
-## What The Reading Adds
+Earnings strength extends beyond the largest technology companies. **93.6% of S&P 500 companies met or beat EPS estimates** in the Citi Wealth / Bloomberg snapshot dated August 10, rounded to 94%. This includes companies that merely met expectations; it is neither a beat-only rate nor earnings growth. The final reporting-quarter denominator is not specified, and performance against estimates does not independently establish cheap valuations or an AI-driven earnings effect.
 
-### Earnings And The Size Of The Investment Cycle
+Combined capex for **Alphabet, Amazon, Meta, Microsoft, and Oracle** rose from **$241B in 2024 to $416B in 2025**. The July 31 Bloomberg consensus, calculated by Vanguard, put **2026E at $777B**, an **86.8% increase** over 2025. Rounded annual estimates for 2027-2030 are **$1.1T, $1.2T, $1.1T, and $1.2T**. That is approximately $4.6T over those four years, not per year.
 
-- **Earnings breadth:** page 9's latest bar is **93.6% of S&P 500 companies meeting or beating EPS estimates**, rounded to 94% in the commentary. Source: Citi Wealth / Bloomberg Finance, **August 10, 2026**. This is not a 94% beat-only rate or a 94% earnings-growth rate. The exhibit does not explicitly identify the final reporting-quarter denominator, so retain the as-of date rather than invent one. Strong performance against estimates also does not by itself establish cheap valuations or AI causation.
-- **Capex scale:** page 15 shows five-hyperscaler capex of **$416B in 2025** and **$777B in 2026E**, followed by rounded annual estimates of **$1.1T, $1.2T, $1.1T, and $1.2T for 2027-2030**. Source: Vanguard calculations / Bloomberg consensus, **July 31**; companies are Alphabet, Amazon, Meta, Microsoft, and Oracle. The 2026 estimate is 86.8% above 2025, but not an achieved full-year result. The adjacent compute-cycle illustration is a scale narrative, not a compatible annual spending forecast.
-- **Revisions and cycle comparisons:** page 16's CapIQ snapshots through **September 18** show selected earlier estimates repeatedly revised upward. Its BofA comparison, dated **August**, puts the latest hyperscaler capex/GDP reading near some previous investment-cycle peaks, not above every past peak. Neither exhibit proves where the cycle ends or that today's consensus must also be too low.
+Successive CapIQ forecasts through September 18 show repeated upward revisions for the selected vintages. This supports the view that the buildout has exceeded earlier expectations, but it does not establish that current forecasts must also be too low. The newer CapIQ estimates and July Bloomberg estimates remain separate snapshots.
 
-Details: [AI capex](ai-capex.md#five-hyperscaler-consensus-snapshot). The Oracle-inclusive cohort and cash/lease definitions must be reconciled before replacing the older worksheet or the memory model's sensitivity input.
+Hyperscaler capex is also approaching historic scale relative to US GDP. BofA's August comparison places the latest reading near roughly **1.6%-1.8%**, depending on lease treatment: around some telecom and shale-cycle peaks, but below the railroad and earlier oil-and-gas peaks shown. These comparisons illustrate magnitude, not the timing of a peak. Global spending, domestic GDP, leases, and fiscal periods require reconciliation. The much larger long-run compute-cycle opportunity is not an annual capex forecast.
 
-### Benefits, Costs, And Jobs
+More detail: [AI capex](ai-capex.md#five-hyperscaler-consensus-snapshot).
 
-- **Premium posted pay:** page 20's Indeed sample, **January-June 2026**, reports annual-pay premiums of **10%-64%** across the displayed job titles and hourly premiums of **2%-42%**. The comparison is same-title advertised pay, not realized earnings or a fully controlled wage effect. Its separate construction chart shows more than 300K jobs above a comparison trend in data-center-exposed categories, not jobs individually traced to AI projects.
-- **Electricity:** page 21 cites **Watten, Bistline, and Blanford, August 24**, for an estimated **0.4% reduction in average residential retail prices per 10% increase in data-center capacity** and roughly **6% lower rates attributable to capacity growth in 2019-2024**. This is the study's estimate as quoted by the report, not independently replicated here. The accompanying load/price scatterplot is not a causal test. Fixed-cost sharing may help when large loads fund required infrastructure; local tariffs, generation constraints, upgrades, and cost shifting can change the result.
-- **Technical employment:** page 31's BLS / Economist exhibit, dated **September 4**, shows technical employment above a broader hiring-trend counterfactual. It is a modeled employment-stock comparison, not direct proof of AI-created jobs. The accompanying entry-level headcount-share comparison also depends on adoption selection and the comparison group. These findings challenge a blanket job-destruction story without ruling out displacement or weaker opportunities in specific roles.
+## Revenue, Backlogs, And Cash Flow
 
-Details: [capex benefits and constraints](ai-capex.md#economic-benefits-and-local-constraints) and [technical employment](ai-adoption.md#technical-employment-evidence).
+Combined OpenAI and Anthropic annualized revenue continues to expand. YipitData's September 18 estimate implies approximately **$130B-$140B at Q3 2026E**. This is a rough reading of a third-party run-rate estimate, not exact company-reported contracted ARR or recognized annual revenue. A separate comparison suggests the labs could add roughly **$100B in 2026**, versus **$63B for public software excluding clouds**, but the lab figure is explicitly tentative and the measurement bases are not reconciled. Rapid growth is supported; a like-for-like annual revenue comparison is not yet established.
 
-### Commercial Demand And Investment Returns
+Cloud contracts tell a similar demand story. Combined Microsoft RPO, Google Cloud backlog, and Amazon RPO reached approximately **$1.7T at the plotted Q2 2026 endpoint**. These measures cover different businesses and contract durations. A larger pipeline supports future demand visibility but is not current revenue, GPU utilization, or proof of a shortage in every region and product.
 
-- **Labs:** page 23's combined OpenAI/Anthropic ARR chart ends around **$130B-$140B at Q3 2026E**, an approximate visual reading of a **September 18 YipitData estimate**. It is not exact company-reported contracted ARR. The adjacent incremental-revenue comparison has a tentative **approximately $100B** lab figure for 2026E and a footnote saying the full year is unknown. Do not compare these figures with public-company recognized revenue without reconciling the measurement basis.
-- **Backlog and FCF:** page 24 depicts approximately **$1.7T** of combined Microsoft RPO, Google Cloud backlog, and Amazon RPO at the plotted Q2 2026 endpoint. This supports growing contracted demand, but the components differ in scope and duration. The five-company FCF chart, sourced to FactSet / Goldman Sachs on **August 28**, projects recovery around 2028 and stronger cash generation thereafter. Positive and negative stacked contributions must be netted; future recovery is not realized ROI, nor a claim that every company turns positive together.
-- **Older GPUs:** page 26's Silicon Data exhibit, dated **September 7**, labels rental endpoints of **$5.69 B200, $3.29 H200, $2.63 H100, and $1.59 A100 per GPU-hour**. These support continuing use of multiple hardware generations. Residual values in that exhibit are **inferred from rental rates**, not observed used-hardware sale prices, and cannot independently validate depreciation lives.
-- **Cheaper intelligence and rebound demand:** page 34 shows steep token/quality-adjusted price declines and periods of firm or recovering H100 rentals. This is consistent with a Jevons-style response, not a causal estimate. Total compute depends on workload volume times compute per workload; rental prices also depend on supply, service terms, and workload mix. Lower token prices do not mechanically cause higher GPU rents.
+Heavy investment is suppressing near-term free cash flow. FactSet / Goldman Sachs consensus dated August 28 projects recovery around **2028**, followed by stronger cash generation in 2029-2030. This is a forecast across five hyperscalers, not realized AI-infrastructure ROI. Positive and negative company contributions need to be netted, and consolidated FCF includes non-cloud businesses. Its recovery depends on operating cash flow eventually outgrowing capex, lease payments, and working-capital needs.
 
-Details: [foundation labs](foundation-labs.md#october-reading-revenue-growth-and-measurement-boundaries), [cloud growth](cloud-growth.md#backlog-growth-and-the-cash-flow-outlook), and [GPU economics](gpu-prices.md#rental-resilience-and-inferred-gpu-value). No raw Ornn index history or licensed feed was added.
+More detail: [foundation labs](foundation-labs.md#revenue-growth-and-measurement-boundaries) and [cloud growth](cloud-growth.md#backlog-growth-and-the-cash-flow-outlook).
 
-### Adoption, Consumer Spending, And The Supply Chain
+## Cheaper Intelligence And Resilient Compute Demand
 
-- **Enterprise depth:** page 27's Apollo snapshot, **September 11**, reports Q2 shares of **74% stating an AI plan, 69% citing a live deployment, 29% quantifying a result, and 2% disclosing a metric tracked over time**. The right reading is broad but shallow public evidence, not that only 2% measure AI internally. Morgan Stanley's separate adopter survey is a different sample.
-- **Consumers:** page 38 shows **2.2%** at the latest plotted paid-household participation endpoint and **$31 monthly spend among subscribers** in May 2026, citing PNC internal data dated **July 13**. YipitData's **September 8** panels show rising later-age desktop retention curves and roughly **5x growth in observable paid subscriptions since 2025**. Observable subscriptions, unique subscribers, households, desktop usage retention, and paid renewals are not interchangeable denominators.
-- **Where $100 goes:** page 44's **BNP Paribas August illustration** allocates **$50 to chips, $20 power, $15 networking, $7.50 cooling, and $7.50 facilities/construction**. Within chips, $25 is accelerators and $15 memory ICs. This is an exposure map, not an exact realized spending mix or justification for applying a 50% GPU-system share to total hyperscaler capex. Downstream allocations are not extra spending to add on top.
+New accelerator generations have not eliminated economic demand for older hardware. Silicon Data's September 7 rental endpoints were **$5.69 for B200, $3.29 for H200, $2.63 for H100, and $1.59 for A100 per GPU-hour**. Resilient rents support continued use across generations, although these benchmarks are not directly comparable with every provider's region, commitment, or service terms. Residual values inferred from those rents are modeled asset values, not used-hardware sale prices.
 
-Details: [adoption and consumer evidence](ai-adoption.md#enterprise-breadth-versus-measured-depth), [capex allocation](ai-capex.md#illustrative-allocation-of-each-100), and [memory-model implications](memory-storage.md#october-3-reading-update).
+At the same time, token and quality-adjusted inference prices have fallen sharply. Cheaper successful tasks can enable more applications and more intensive agentic workloads. If the increase in workload volume exceeds the reduction in compute per workload, total compute consumption rises: a Jevons-style rebound.
 
-## What To Track Next
+That mechanism is consistent with periods of falling token prices and firm GPU rents, but the price curves alone do not prove causation. Rents also depend on supply constraints and transaction mix. Rebound demand can occur even if rental prices fall, and longer reasoning or context can offset a cheaper headline token price.
 
-| Question | Discriminating evidence |
+More detail: [GPU economics](gpu-prices.md#rental-resilience-and-inferred-gpu-value) and [memory-model implications](memory-storage.md#capital-allocation-and-memory-demand).
+
+## Adoption Is Broad, Measurement Is Shallow
+
+Enterprise use has spread faster than public evidence of sustained impact. In Apollo's September 11 snapshot of Q2 S&P 500 disclosures, **74% stated an AI plan, 69% cited a live deployment, 29% quantified a result, and 2% disclosed a metric tracked over time**. These are disclosure categories, not additive measures or proof that the other 98% do no internal measurement. Morgan Stanley's separate adopter survey also indicates rising quantified benefits, but represents a different sample.
+
+Consumer monetization is expanding from a low base. PNC's July research shows **2.2% of households** at the latest plotted paid-AI participation endpoint and **$31 monthly spend among subscribing households** in May 2026. YipitData's September 8 observations show roughly **5x growth in observable paid subscriptions since 2025** and rising retention at later ages in desktop usage cohorts.
+
+The combined evidence supports growing willingness to pay and repeat engagement. It does not make observed subscriptions a census of the US market or desktop usage retention a measure of paid renewal. Households, people, subscriptions, and selected transaction panels remain different denominators.
+
+More detail: [AI adoption](ai-adoption.md#enterprise-breadth-versus-measured-depth).
+
+## Jobs And Electricity
+
+Data-center investment is increasing demand for skilled labor. Indeed's January-June 2026 posting sample reports **10%-64% annual-pay premiums** for the displayed data-center roles and **2%-42% hourly premiums**. These are advertised offers for comparable job titles, not realized wage increases for the same workers. A separate construction-employment comparison puts data-center-exposed categories more than **300K jobs above a broader construction trend**; that is not a count of jobs individually traced to AI.
+
+BLS / Economist data likewise place several technical occupations above a broader hiring-trend counterfactual. This challenges a uniform job-destruction narrative while leaving room for displacement, weaker entry-level opportunities in particular roles, and changing task mixes. Employment levels and relative headcount shares do not independently identify jobs caused by AI adoption.
+
+Electricity can also benefit from scale when large, steady loads help cover fixed grid costs. Watten, Bistline, and Blanford's August 24 study estimates **0.4% lower average residential retail prices per 10% increase in data-center capacity**, attributing roughly **6% lower rates** to capacity growth during 2019-2024. That is the authors' estimate as quoted in the source presentation, not a result independently replicated here. Local generation and transmission constraints, tariffs, and cost shifting can produce different outcomes; the historical estimate is not a promise of lower household bills everywhere.
+
+More detail: [economic benefits and constraints](ai-capex.md#economic-benefits-and-local-constraints) and [technical employment](ai-adoption.md#technical-employment-evidence).
+
+## Where The Capital Goes
+
+BNP Paribas's August supply-chain illustration allocates each **$100 of AI capex** as follows:
+
+| Use | Illustrative allocation |
 | --- | --- |
-| Are capex estimates still too low? | Same-cohort, same-definition forecast revisions for a fixed target year, followed by actual cash and lease spending; repeated downward revisions would challenge the extrapolation |
-| Is backlog becoming productive demand? | Current versus long-dated RPO, customer concentration, revenue conversion, utilization, and cash collection |
-| Does the FCF recovery survive the spending cycle? | Operating cash flow versus cash capex and lease payments; compare revisions to both sides rather than FCF alone |
-| Are lower prices expanding total compute? | Fixed-quality cost per task, workload volume, GPU-hours per workload, utilization, and comparable rental pricing |
-| Is adoption becoming deep and durable? | Longitudinal enterprise ROI, paid renewals, fixed-panel spending, and cohort retention with explicit denominators |
-| Who receives the economic benefits? | Realized wages and hiring by role/region; residential tariffs, large-load cost allocation, and completed generation/transmission investment |
+| Semiconductor chips | $50 |
+| Power | $20 |
+| Networking equipment | $15 |
+| Cooling | $7.50 |
+| Facilities and construction | $7.50 |
 
-The six topic notes were updated without changing spreadsheet models, historical valuation snapshots, or the memory model's fleet assumptions. The [September 8 research snapshot](ai-buildout-2026-09.md) remains intact as a dated record. A later edit date is not evidence that every historical price or company metric was refreshed.
+Within chips, **$25 goes to accelerators and $15 to memory ICs**. The broader opportunity therefore extends into electrical equipment, networking, cooling, and construction, not just GPUs. This is an illustrative allocation, not an exact realized spending mix or an HBM-only estimate. Upstream allocations sit within the same chain and are not additional final expenditure.
+
+More detail: [capex allocation](ai-capex.md#illustrative-allocation-of-each-100).
+
+## Conclusion
+
+The evidence strengthens the case for a large, multi-year AI buildout supported by commercial demand. It does not remove the risks of overinvestment, concentrated customers, weak returns, or cyclical supplier profits. Lower inference costs and rising use can coexist with high infrastructure spending; the investment outcome still depends on who captures the resulting cash flows.
+
+## Sources
+
+The following third-party research is reproduced or summarized in a16z Growth's September presentation. Source dates are retained; the underlying proprietary datasets and causal studies have not been independently replicated here.
+
+- [Citi Wealth / Bloomberg Finance](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=9), August 10: EPS expectations.
+- [Vanguard / Bloomberg](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=15), July 31; [CapIQ and BofA](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=16), September 18 and August: capex scale, revisions, and cycle comparisons.
+- [YipitData / CapIQ](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=23), September 18: lab run rates and incremental-revenue estimates.
+- [Company filings / FactSet / Goldman Sachs](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=24), Q2 observations and August 28 forecasts: backlog and FCF.
+- [Silicon Data](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=26), September 7; [Goldman Sachs / Department of Commerce and Ornn / Silicon Data / Bloomberg via Citadel Securities](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=34), July 10 and August: GPU rents and inference-price comparisons.
+- [Apollo and AlphaWise / Morgan Stanley](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=27), September 11 and July 27; [PNC and YipitData](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=38), July 13 and September 8: enterprise and consumer adoption.
+- [Indeed / BLS / Haver / Goldman Sachs](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=20), August 19 and September 1; [BLS / The Economist and Revelio / Ramp](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=31), September: labor-market comparisons.
+- [Watten, Bistline, and Blanford](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=21), August 24: residential electricity-price estimate.
+- [BNP Paribas Equity Research](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44), August: illustrative supply-chain allocation.

@@ -1,12 +1,12 @@
 # AI CapEx
 
-Updated October 3, 2026 with a reading of a16z Growth's September State of Markets report. The September 8 company checks below retain their original observation dates. Separate actual cash spending, company-defined capex including finance leases, management guidance, consensus forecasts, and research scenarios. None of these measures automatically equals AI-only spending or deployed accelerator capacity.
+Research as of October 3, 2026. Actual cash spending, company-defined capex including finance leases, management guidance, consensus forecasts, and research scenarios measure different things. None automatically equals AI-only spending or deployed accelerator capacity. Company figures last checked September 8 retain their original observation dates.
 
 ## Five-Hyperscaler Consensus Snapshot
 
-The chart "Capex Is A Multi-Trillion Dollar Affair" on [page 15 of a16z Growth's September 2026 State of Markets](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=15) reproduces **Vanguard calculations using Bloomberg data as of July 31, 2026**. The cohort is Alphabet, Amazon, Meta, Microsoft, and Oracle. It is a secondary-source snapshot, not a new company-guidance series or an October consensus check.
+Combined investment by Alphabet, Amazon, Meta, Microsoft, and Oracle is expected to reach **$777B in 2026**, up from **$416B in 2025**. [Vanguard calculations using Bloomberg consensus as of July 31, 2026](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=15) project annual spending above $1T from 2027 onward. These estimates, compiled in a16z Growth's September State of Markets, are distinct from company guidance and are not an October consensus refresh.
 
-| Year | Capex shown | Status in the chart |
+| Year | Capex | Basis |
 | --- | ---: | --- |
 | 2020 | $97B | Historical actual |
 | 2021 | $131B | Historical actual |
@@ -20,25 +20,25 @@ The chart "Capex Is A Multi-Trillion Dollar Affair" on [page 15 of a16z Growth's
 | 2029 | Approximately $1.1T | Bloomberg consensus estimate, rounded chart label |
 | 2030 | Approximately $1.2T | Bloomberg consensus estimate, rounded chart label |
 
-The displayed 2026 estimate is **86.8% above** the 2025 actual, following **72.6% growth** from 2024 to 2025. These are calculations from the chart's rounded values. The rounded 2027-2030 labels imply about $4.6T cumulatively, not $4.6T each year. Do not infer more precision than the exhibit supplies.
+The 2026 estimate is **86.8% above** the 2025 actual, following **72.6% growth** from 2024 to 2025. Calculated from rounded source values, the 2027-2030 estimates imply about $4.6T cumulatively, not $4.6T each year.
 
-This series includes Oracle and excludes Tesla, unlike the historical August worksheet below. The presentation does not reconcile each company's cash spending, finance leases, operating leases, fiscal periods, or AI-only share. Keep those differences explicit before comparing it with management guidance or using it as the funding input to the memory model. Growth in announced dollars is not the same as completed, powered, utilized capacity.
+This series includes Oracle and excludes Tesla, unlike the historical August worksheet below. Each company's cash spending, leases, fiscal periods, and AI-only share are not reconciled in the source, limiting direct comparison with management guidance or the memory model's funding assumptions. Announced dollars are not the same as completed, powered, utilized capacity.
 
 ### Revisions And Historical Cycle Comparisons
 
-[Page 16](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=16) compares successive CapIQ consensus snapshots through **September 18, 2026** for the same five hyperscalers. Later forecasts rise well above the selected earlier vintages: the September path is around $0.8T for 2026 and above $1T for 2027-2028. The dollar amounts are approximate visual readings, not extracted point-level data. The exhibit supports repeated upward revisions in this period; it does not establish that every forecast missed or that today's estimates must be too low. Track revisions at a fixed target year and horizon, then compare the last forecast with the eventual actual. Do not splice this September CapIQ path into July's Bloomberg series.
+[Successive CapIQ consensus snapshots through September 18, 2026](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=16) show repeated upward revisions for the same five hyperscalers. The September path is around $0.8T for 2026 and above $1T for 2027-2028, using approximate visual readings rather than point-level data. Investment expectations have repeatedly exceeded selected earlier forecasts; this does not establish that every forecast missed or that current estimates must be too low. The September CapIQ and July Bloomberg series remain separate snapshots.
 
-The adjacent BofA Global Research chart, dated **August 2026**, puts hyperscaler spending near roughly **1.6%-1.8% of US GDP** at its latest plotted endpoint, depending on lease treatment. Visually, that is near or above the telecom and shale-cycle peaks shown, but below the railroad and 1970s-1980s oil-and-gas peaks of roughly 2%-2.3%. These are scale comparisons, not a clock predicting the cycle's end. Check domestic versus global expenditure, lease definitions, and annual spending versus GDP before constructing a comparable ratio.
+Hyperscaler spending is approaching the relative scale of earlier investment booms. BofA Global Research's **August 2026** comparison places the latest reading at roughly **1.6%-1.8% of US GDP**, depending on lease treatment. That is near or above the telecom and shale-cycle peaks shown, but below railroad and 1970s-1980s oil-and-gas peaks of roughly 2%-2.3%. These are approximate scale comparisons, not a clock predicting the cycle's end. Domestic versus global expenditure and lease definitions limit their comparability.
 
-The compute-cycle illustration on page 15, attributed to Morgan Stanley Investment Research on September 14, pairs a much larger potential AI user/device base with a $10T capex label. Treat it as a long-horizon framing assumption, not annual capex guidance, a dated cumulative forecast, or a count of unique paying users; its units and time horizon are not reconciled with the annual series.
+The longer-run opportunity could be much larger. [Morgan Stanley Investment Research's September 14 compute-cycle comparison](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=15) associates a substantially larger potential AI user/device base with $10T of capex. This is a long-horizon framing assumption, not annual guidance, a dated cumulative forecast, or a count of unique paying users; its units and time horizon are not reconciled with the annual series.
 
 ## Economic Benefits And Local Constraints
 
 ### Posted Pay And Construction Employment
 
-[Page 20](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=20) cites **Indeed, August 19, 2026**, comparing median posted US base pay in **January-June 2026** for the same normalized job title and pay basis, outside Installation & Maintenance. Titles require more than 50 postings on each side. The chart reports:
+Data-center roles command premium advertised pay. [Indeed's August 19, 2026 research](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=20) compares median posted US base pay in **January-June 2026** for the same normalized job title and pay basis, outside Installation & Maintenance. Each title has more than 50 postings on both sides of the comparison:
 
-| Job title / pay basis | Non-data-center posting | Data-center posting | Premium labeled in chart |
+| Job title / pay basis | Non-data-center posting | Data-center posting | Reported premium |
 | --- | ---: | ---: | ---: |
 | Facilities manager / annual | $82K | $134K | 64% |
 | Construction manager / annual | $104K | $134K | 29% |
@@ -52,19 +52,19 @@ The compute-cycle illustration on page 15, attributed to Morgan Stanley Investme
 
 Pay amounts are rounded, so recalculating premiums from them need not reproduce the source percentages. These are advertised offers, not realized wages or a matched causal wage effect; geography, seniority, qualifications, and employer mix can still differ. The separate annual/hourly network-engineer rows are different samples.
 
-The same page cites BLS, Haver Analytics, and Goldman Sachs research dated September 1 for more than 300K additional jobs in data-center-exposed construction categories relative to other construction's trend since 2022. That comparison includes HVAC/electrical contractors, utilities, and commercial construction; it is not an independently identified count of jobs caused solely by AI. Skilled-labor demand is a potential benefit and a cost/capacity bottleneck. See [technical-employment evidence](ai-adoption.md#technical-employment-evidence).
+BLS, Haver Analytics, and Goldman Sachs research dated September 1 places data-center-exposed construction categories more than 300K jobs above other construction's trend since 2022. Those categories include HVAC/electrical contractors, utilities, and commercial construction; the difference is not an independently identified count of jobs caused solely by AI. Skilled-labor demand is both a potential benefit and a cost/capacity bottleneck. See [technical-employment evidence](ai-adoption.md#technical-employment-evidence).
 
 ### Electricity Prices: A Conditional Finding
 
-[Page 21](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=21) quotes **Watten, Bistline, and Blanford, "Have Data Centers Raised Your Electric Bill?" (August 24, 2026)**. As presented, the authors estimate about **0.4% lower average residential retail prices for each 10% increase in data-center capacity**, and attribute approximately **6% lower rates** to the residential-customer-weighted capacity growth of 160% across states during **2019-2024**. This records the study's reported estimate, not a result independently replicated here. Its full identification strategy, controls, uncertainty, and geographic heterogeneity have not been verified in this review.
+Larger data-center loads may lower average residential electricity rates under some conditions. [Watten, Bistline, and Blanford's August 24 study, "Have Data Centers Raised Your Electric Bill?"](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=21), estimates about **0.4% lower average residential retail prices for each 10% increase in data-center capacity**. The authors attribute approximately **6% lower rates** to residential-customer-weighted capacity growth of 160% across states during **2019-2024**. These are the study's findings as quoted in a16z's compilation, not a result independently replicated here; its full identification strategy, controls, uncertainty, and geographic heterogeneity remain unverified.
 
 The plausible mechanism is spreading fixed grid costs across a larger, steady load when data centers pay for the capacity they require. The accompanying 2019-2025 state scatterplot uses inflation-adjusted retail price changes and load growth; it is descriptive evidence, not the causal test. It is also a different period and measure from the capacity study.
 
-Do not turn either exhibit into "data centers always lower bills" or forecast a local household's bill from the quoted coefficient. Retail tariffs, required generation/transmission upgrades, cost allocation, power procurement, stranded-asset risk, and the timing of investment can reverse the local outcome. Track realized residential rates and large-load tariffs together with connection queues and infrastructure costs. Lower retail rates in one historical sample can coexist with scarce deployable power today.
+These findings do not imply that data centers always lower bills. Retail tariffs, required generation/transmission upgrades, cost allocation, power procurement, stranded-asset risk, and investment timing can reverse the local outcome. Lower retail rates in one historical sample can coexist with scarce deployable power today.
 
 ## Illustrative Allocation Of Each $100
 
-[Page 44](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44), attributed to **BNP Paribas Equity Research, August 2026**, is a high-level supply-chain illustration, explicitly subject to changing costs and demand/supply conditions:
+[BNP Paribas Equity Research's August 2026 allocation](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44) illustrates how each $100 of AI infrastructure spending reaches different parts of the supply chain. The mix is a high-level estimate, subject to changing costs and demand/supply conditions:
 
 | First-level use | Dollars per illustrative $100 | Share |
 | --- | ---: | ---: |
@@ -131,8 +131,4 @@ The original note called the following figures "company estimates" without citat
 | 2030 | ~$1.6T |
 | 2031 | ~$1.65T |
 
-## Track Investment Conversion
-
-For each future update, capture company, release date, exact period, cash PP&E, finance-lease additions, operating-lease commitments, total versus AI-only scope, actual versus guidance, and the source URL. Record assumption changes separately from accounting reclassifications.
-
-Pair spending with cloud margins, backlog conversion, installed capacity, and supplier earnings. Supplier sales and a customer's capex are different views of the same investment chain, not amounts to add together. See the [October reading summary](ai-buildout-2026-10.md) and the earlier [September buildout update](ai-buildout-2026-09.md).
+Related research: [October buildout report](ai-buildout-2026-10.md) and [September buildout summary](ai-buildout-2026-09.md).

@@ -1,12 +1,12 @@
 # GPU & Memory Prices
 
-Updated October 3, 2026 with secondary-source charts from a16z Growth's September report. Provider prices last checked September 8 and the older August worksheet retain their own dates. Advertised cloud rates, executed-transaction benchmarks, modeled asset values, and forward capacity prices answer different questions.
+Research as of October 3, 2026. Rental demand remains resilient across several GPU generations even as inference prices fall. Provider prices last checked September 8 and the August worksheet retain their own dates. Advertised rates, transaction benchmarks, modeled asset values, and forward capacity prices answer different questions.
 
 ## Rental Resilience And Inferred GPU Value
 
-[Page 26 of the report](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=26), citing **Silicon Data, September 7, 2026**, plots rental rates alongside residual values **inferred from those rental rates**. The displayed rental endpoints are:
+Older GPUs continue to command rental revenue despite the arrival of newer hardware. [Silicon Data's September 7, 2026 pricing](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=26), compiled in a16z Growth's September State of Markets, reports the following rental endpoints alongside residual values **inferred from those rents**:
 
-| GPU | Rental rate labeled in exhibit, USD/GPU-hour | Evidence classification |
+| GPU | Rental rate, USD/GPU-hour | Evidence classification |
 | --- | ---: | --- |
 | B200 | $5.69 | Secondary-source endpoint, not a fresh provider quote |
 | H200 | $3.29 | Secondary-source endpoint, not a fresh provider quote |
@@ -19,15 +19,15 @@ The series show continuing economic use of older GPUs and periods of stable or r
 
 ## Cheaper Tokens And Compute Demand
 
-[Page 34](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=34) juxtaposes **Ornn H100 rental pricing** with a **Silicon Data token-price expenditure index**, attributed to Ornn, Silicon Data, and Bloomberg as compiled by Citadel Securities, with data through August 2026. The curves show periods in which token prices fall while compute rents remain firm or recover, but also a period in which both decline. The chart is consistent with a rebound-demand hypothesis; it does not by itself estimate demand elasticity or identify the cause of a rental-price move. No Ornn numeric time series is reproduced here; the publication limits below still apply.
+Falling token prices have coincided with periods of firm or recovering H100 rents. [Ornn, Silicon Data, and Bloomberg data compiled by Citadel Securities through August 2026](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=34) compare **Ornn H100 rental pricing** with a **Silicon Data token-price expenditure index**. There is also a period in which both decline. This is consistent with rebound demand, but does not estimate demand elasticity or identify the cause of a rental-price move. No Ornn numeric time series is reproduced here; the publication limits below still apply.
 
-The mechanism to test is: lower cost per successful task enables additional workloads, which may increase total compute consumption enough to offset efficiency gains. In a fixed-quality, comparable-workload model:
+Lower cost per successful task can enable additional workloads, increasing total compute consumption enough to offset efficiency gains. In a fixed-quality, comparable-workload model:
 
 `total GPU-hours = completed workloads * GPU-hours per workload`
 
 If GPU-hours per workload halve, workload volume must more than double for aggregate GPU-hours to increase. This is a sensitivity relationship, not an estimate from the chart. Token prices are not the same as physical GPU-hours per workload: model mix, routing, cache reads, prefill versus decode, reasoning length, latency, and provider margins all intervene.
 
-**Jevons-style rebound does not require rental prices to rise.** Prices depend on supply as well as demand; a rise can also reflect power/capacity constraints or a change in the transaction mix. Track workload volumes, effective tokens per GPU-hour, fixed-configuration rental rates, utilization/availability, and cost per successful task together. Cheaper inference plus rising rentals is suggestive, not sufficient causal proof. The [memory model](memory-storage.md#demand-to-memory-bottleneck) remains a scenario framework rather than an extrapolation of this chart.
+**Jevons-style rebound does not require rental prices to rise.** Prices depend on supply as well as demand; a rise can also reflect power/capacity constraints or changes in the transaction mix. Cheaper inference plus rising rentals is suggestive, not sufficient causal proof. The [memory model](memory-storage.md#demand-to-memory-bottleneck) remains a scenario framework rather than an extrapolation of this price comparison.
 
 ## September 8 Provider Check
 
@@ -60,13 +60,11 @@ The [public data portal](https://data.ornn.com/) and [documentation](https://doc
 
 **Publication limit:** Ornn's [Terms of Use, sections 2, 3, and 6](https://ornn.com/terms-of-use), reviewed September 8, require prior written authorization for external republication of its data and restrict systematic collection. This public note therefore links to Ornn but does not reproduce index values, charts, historical series, or API outputs, and does not implement a scraper. Account or API access alone is not republication permission.
 
-Before adding an authorized numeric series, record the series ID, hardware/form factor, memory, observation timestamp and timezone, currency/unit, region, commitment length, node size, availability/SLA, methodology version, and permitted publication scope. A benchmark is not an executable rental quote. Do not label the homepage's illustrative animation as a current observed price.
+A benchmark is not an executable rental quote. Hardware, memory, region, commitment, node size, service level, and methodology determine comparability; the homepage's illustrative animation is not a current observed price.
 
-## What To Track Next
+## Price And Performance Measures
 
-- Provider list-price changes and same-configuration spot spreads, with dated observations rather than carried-forward values presented as fresh quotes.
-- OCPI direction and spot-versus-forward relationships only within the permitted data-access and publication scope.
-- Cost per successfully completed task alongside dollars per GPU-hour. Hardware generation, model quality, cache hit rate, and utilization can change economics without a list-price change.
+Hardware generation, model quality, caching, and utilization can change deployment economics without changing the list price. The relevant measures cover more than dollars per GPU-hour:
 
 | Area | Metrics |
 | --- | --- |

@@ -2,13 +2,13 @@
 
 HBM and DDR are volatile memory. NAND and HDD are persistent media; an SSD is a device built from NAND, a controller, and usually DRAM. For AI, HBM is the critical accelerator bottleneck, while SSDs and HDDs hold data outside the compute path.
 
-## October 3 Reading Update
+## Capital Allocation And Memory Demand
 
-The [a16z Growth September report, page 44](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44), reproduces BNP Paribas's August 2026 illustrative $100 AI-capex allocation: $50 chips, $20 power, $15 networking, $7.50 cooling, and $7.50 facilities/construction. Within chips, $25 is accelerators and $15 is memory ICs. See the [capex note](ai-capex.md#illustrative-allocation-of-each-100) for the full accounting boundary.
+[BNP Paribas's August 2026 illustrative AI-capex allocation](https://d1lamhf6l6yk6d.cloudfront.net/uploads/2026/10/State-of-Markets-Sep-2026.pdf#page=44), compiled by a16z Growth and reviewed October 3, assigns each $100 as follows: $50 chips, $20 power, $15 networking, $7.50 cooling, and $7.50 facilities/construction. Within chips, $25 is accelerators and $15 is memory ICs. See the [capex note](ai-capex.md#illustrative-allocation-of-each-100) for the accounting boundary.
 
-This strengthens the reason to track memory, power, and networking alongside accelerators; it does **not** turn the $750B sensitivity envelope below into a verified AI-spending forecast. Accelerator chips are not the same purchase boundary as accelerator-bearing systems, and memory ICs include more than HBM. Applying the illustrative 50% semiconductor share as a GPU-system share would overstate modeled deployment capacity.
+Memory, power, and networking therefore represent substantial parts of the investment chain alongside accelerators. This does **not** turn the $750B sensitivity envelope below into a verified AI-spending forecast. Accelerator chips are not the same purchase boundary as accelerator-bearing systems, and memory ICs include more than HBM. Applying the illustrative 50% semiconductor share as a GPU-system share would overstate modeled deployment capacity.
 
-The [token-price and GPU-price exhibits](gpu-prices.md#cheaper-tokens-and-compute-demand) add a demand sensitivity rather than a new throughput estimate. Aggregate GPU-hours equal workload volume times GPU-hours per comparable workload. Efficiency can be outweighed by more tasks, longer context, reasoning, or agent loops, but the relative growth rates must be measured. Keep the existing fleet, HBM, and power scenarios unchanged until workload mix and realized serving efficiency justify new inputs. This review does not refresh the September DDR5 observation or the historical memory prices.
+[Cheaper inference and resilient GPU pricing](gpu-prices.md#cheaper-tokens-and-compute-demand) introduce a demand sensitivity rather than a new throughput estimate. Aggregate GPU-hours equal workload volume times GPU-hours per comparable workload. More tasks, longer context, reasoning, or agent loops can outweigh efficiency gains. The existing fleet, HBM, and power scenarios remain unchanged because the price evidence alone does not establish new workload or serving-efficiency inputs. September DDR5 and historical memory prices retain their original dates.
 
 ## September 8 Update
 
@@ -168,16 +168,5 @@ Latency is an order-of-magnitude access class, not a directly comparable benchma
 | Aug 2026 | Seagate Exos X24 HDD | 24 TB | 4.16 ms rotational; seek extra | $960 ($40/TB) | New retail listing; not fleet contract pricing |
 
 `Reported` means the cited source printed the endpoint, `derived` is arithmetic on reported inputs, and `estimate` has no public transaction print. HBM and enterprise SSD contracts are negotiated; retail figures are fixed-product or market-basket proxies. Preserve the product, capacity, interface, condition, source, and observation date on every update.
-
-## Update Cadence
-
-| Signal | Cadence | Source |
-| --- | --- | --- |
-| HBM generation premium / ASP trend | Quarterly or when reported | [TrendForce HBM research](https://www.dramexchange.com/WeeklyResearch/Post/2/12345.html) |
-| DDR5 die spot price | Weekly snapshot | [TrendForce DRAM](https://www.trendforce.com/price/dram) |
-| TLC / QLC NAND wafer contract trend | Monthly | [TrendForce NAND](https://www.trendforce.com/price/flash/wafer_contract) |
-| Client SSD contract proxy | Quarterly | [TrendForce client SSD](https://www.trendforce.com/price/flash/pcc_oem_ssd_contract) |
-| Fixed enterprise SSD and HDD SKUs | Monthly | [DiskPrices](https://diskprices.com/) |
-| HDD reliability by model | Quarterly | [Backblaze Drive Stats](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data) |
 
 Specifications: [Solidigm D5-P5430](https://www.solidigm.com/products/data-center/d5/p5430.html) and [Western Digital data-center HDDs](https://www.westerndigital.com/products/internal-drives/data-center-drives/ultrastar-dc-hc690-hdd).

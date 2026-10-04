@@ -4,7 +4,7 @@ Working notes on the AI buildout, economics, and infrastructure. Figures have th
 
 ## Monthly Review
 
-- [AI Buildout: October 2026](ai-buildout-2026-10.md), an October 3 reading of a16z Growth's September State of Markets, with source dates, forecast distinctions, and follow-up tests.
+- [AI Buildout: October 2026](ai-buildout-2026-10.md), an October 3 research report on AI investment, commercial demand, adoption, and economic effects, with dated sources and forecast distinctions.
 - [AI Buildout: September 2026](ai-buildout-2026-09.md), covering disclosures and observations through September 8.
 
 ## Topic Notes
