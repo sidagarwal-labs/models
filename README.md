@@ -87,7 +87,7 @@ Upcoming dates are [Nasdaq/Zacks estimates](https://www.nasdaq.com/market-activi
 | [ORCL](Tech/PC/ORCL.xlsx) | Tech / Cloud, Tech / PC | FQ4 2025 | Sep 8, 2026 |
 | [AAPL](Tech/Consumer%20Software/AAPL.xlsx) | Tech / Consumer Software | FQ3 2026 | Not announced |
 | [AMZN](Tech/Consumer%20Software/AMZN.xlsx) | Tech / Consumer Software | Q2 2026 | Not announced |
-| [ANT](Tech/Consumer%20Software/ANT.xlsx) | Tech / Consumer Software | Not listed | TBD |
+| [ANT](Tech/Consumer%20Software/ANT.xlsx) | Tech / Consumer Software | Q3 2026 | TBD |
 | [BABA](Tech/Consumer%20Software/BABA.xlsx) | Tech / Consumer Software | FQ4 2025 | Sep 4, 2026 |
 | [BIDU](Tech/Consumer%20Software/BIDU.xlsx) | Tech / Consumer Software | Q4 2025 | Aug 18, 2026 |
 | [CHGG](Tech/Consumer%20Software/CHGG.xlsx) | Tech / Consumer Software | Q3 2024 | Not announced |
